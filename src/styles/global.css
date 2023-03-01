@@ -37,7 +37,7 @@ h1, h2, h3, h4, h5, h6, strong, b {
 	font-family: Verdana, sans-serif;
 	margin: auto;
 	padding: 20px;
-	max-width: 65ch;
+	max-width: 86ch;
 	text-align: left;
 	background-color: var(--background-color);
 	word-wrap: break-word;
