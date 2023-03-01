@@ -1,0 +1,14 @@
+---
+const { date } = Astro.props;
+---
+<!-- Modified incase there is no date given -->
+<time datetime={ date ? date.toISOString() : ''}>
+	{ date ?
+		date.toLocaleDateString('en-us', {
+			year: 'numeric',
+			month: 'short',
+			day: 'numeric',
+		}
+		) : ''
+	}
+</time>
