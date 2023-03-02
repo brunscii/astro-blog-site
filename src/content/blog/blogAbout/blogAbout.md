@@ -4,7 +4,6 @@ description: "This is the about page for the blogs"
 draft: 'final'
 pubDate: '03/03/2023'
 ---
-# About Chris's Blog
 
 ## What is this?
 
@@ -19,27 +18,38 @@ Simply put, I like writing in markdown and it makes for a decent style of blog. 
 This is going to be written in Markdown. I like the way it takes notes and it allows me to add structure to the notes with headings, tables, lists, blockquotes, links, images, and syntax highlighting. Markdown is also a common practice in writing blogs. It is easy to convert into html and is already structured. There are ton's of tutorials on creating your own blog site using different frameworks that all use markdown for the blog writing.
 
 The basic structure shoudl be something like this:
-
-    [Title]
-    [Short description]
     
-    [section]
-        [subsection]
+    ---
+    
+    [title: The title]
+    [description   :    A short description of the blog         ]
+    [pubDate?      :    the initial publication date            ]
+    [updatedDate?  :    the date of any update                  ]
+    [draft?        :    'final' or anything else for draft      ]
+    [heroImage?    :    a link to the hero image for the blog   ]
+    
+    ---
+
+    [##section]
+        [###subsection]
             [information for subsection]
-        [subsection]
+        [###subsection]
             [information for subsection]
-        [subsection]
+        [###subsection]
             [information for subsection]
-    [section]
-        [subsection]
+    [##section]
+        [###subsection]
             [information for subsection]
         ...
 
-Seems basic, right? It all depends on the content. As we say, "content is king."
+Everything in between the iniitial sets of 3 dashes (---) is considered a frontmatter. This is formatting information that is then picked up by Astro and used as metadata for the blog post. The parts with question marks are optional.
+
+Seems basic, right? It all depends on the content. As they say, "content is king."
 There are a few things I'll try to stick to.
+
 - Try to include images for visual learners like myself
 - Syntax highlight when possible
-- Do the research
+- Do the research - I'll try not to post or regurgitate BS
 - All technical information should able to be used as documentation
 
 That being said, not all of this will be tech documents and tutorials. This will probably also have a section for reviews, commentary, and things I think are cool.
