@@ -1,6 +1,8 @@
 ---
 title: "About the blog"
 description: "This is the about page for the blogs"
+draft: 'final'
+pubDate: '03/03/2023'
 ---
 # About Chris's Blog
 

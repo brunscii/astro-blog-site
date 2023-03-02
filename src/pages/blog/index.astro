@@ -22,15 +22,22 @@ const posts = (await getCollection('blog')).sort(
 				padding: unset;
 			}
 			ul li {
-				display: flex;
+				display: grid;
+				grid-template-columns: 12ch 20ch;
 			}
-			ul li :global(time) {
-				flex: 0 0 130px;
+			ul li :global(time), ul li span, ul p {
 				font-style: italic;
 				color: #595959;
 			}
+			ul li span {
+				/* justify-self: center; */
+			}
 			ul li a:visited {
 				/* color: #8e32dc; */
+			}
+			ul p {
+				text-indent: 3em;
+				font-size: .8em;
 			}
 		</style>
 	</head>
@@ -42,10 +49,22 @@ const posts = (await getCollection('blog')).sort(
 				<ul>
 					{
 						posts.map((post) => (
+
+						//only show the link if the post is a final draft
+							post.data.draft && (post.data.draft.toLowerCase() == 'final') ?
+							
 							<li>
-								<FormattedDate date={post.data.pubDate} />
+								{post.data.pubDate ? <FormattedDate date={post.data.pubDate} />
+								: <span> ----- </span>}
 								<a href={`/blog/${post.slug}/`}>{post.data.title}</a>
 							</li>
+							<p>
+								{post.data.description}
+							</p>
+
+							:
+							''
+
 						))
 					}
 				</ul>

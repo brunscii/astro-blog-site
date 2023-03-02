@@ -1,6 +1,7 @@
 ---
 title: "Grep"
 description: "Grep reference"
+draft: "final"
 ---
 # GREP
 
