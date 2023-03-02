@@ -51,7 +51,7 @@ const posts = (await getCollection('blog')).sort(
 						posts.map((post) => (
 
 						//only show the link if the post is a final draft
-							post.data.draft && (post.data.draft.toLowerCase() == 'final') ?
+							// post.data.draft && (post.data.draft.toLowerCase() == 'final') ?
 							
 							<li>
 								{post.data.pubDate ? <FormattedDate date={post.data.pubDate} />
@@ -62,8 +62,8 @@ const posts = (await getCollection('blog')).sort(
 								{post.data.description}
 							</p>
 
-							:
-							''
+							// :
+							// ''
 
 						))
 					}

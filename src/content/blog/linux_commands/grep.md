@@ -1,9 +1,11 @@
 ---
 title: "Grep"
 description: "Grep reference"
+pubDate: '1/7/2023'
+updatedDate: '03/02/2023'
 draft: "final"
 ---
-# GREP
+<!-- # GREP -->
 
 ## What is GREP
 
@@ -87,7 +89,7 @@ According to grep's built-in `--help` function, this is the structure of grep.
     General help using GNU software: <https://www.gnu.org/gethelp/>
 
 
-So what if you arre a man page user then it might look more like this:
+So what if you are a man page user? Well it might look more like this:
 
     GREP(1)                                             User Commands                                             GREP(1)
 
