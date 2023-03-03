@@ -73,11 +73,13 @@ header > nav {
 }
 
 a {
-	color: #3273dc;
+	color: #00ffffaf;
+	/* color: #3273dc; */
 }
 
 nav a {
 	margin-right: 10px;
+	/* color: #00ffffaf; */
 }
 
 textarea {
