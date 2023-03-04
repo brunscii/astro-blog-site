@@ -1,69 +1,54 @@
-# Astro Starter Kit: Blog
+# Astro Blog Site
 
-```
-npm create astro@latest -- --template blog
-```
+## About
+This is a site I made using the blog template in Astro. While it came with some well written
+code for converting md files into blog posts and cool tricks like a [...slug].astro file, I have still done some major modifications in almost every file. 
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/blog)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/blog)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/blog/devcontainer.json)
+The blog posts themselves are my original content. I plan on hosting this blog on my personal domain, christopherjcarlin.com.  
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## The Blog
+The point of this blog is for me to post idead and concepts that I find interesting. These can be 
+ - reference material
+    - IT documentation
+    - A+ Terms
+    - Networking technologies
+    - Server configuration
+    - Programming concepts
+    - Security concepts
+ - Things I am learning
+    - Typescript
+    - React
+    - Astro
+    - Welding
+    - Building in the shop
+    - Car Issues
+    - Literally anything
+ - Things I find interesting
+    - Psychology
+    - Philosophy
+    - Audio gear
+    - Books and Movies
+    - Hardware
 
+Seems like a long list right? Well, I plan to separate things into categories to keep things clean and easy to find.
+Clearly if I want to look through my personal reference material then it doesn't make sense to look through my personal
+book reviews and philosophy musings. This is where a tagging system comes in handy as well as sorting the blogs into different lists. 
 
-![blog](https://user-images.githubusercontent.com/4677417/186189140-4ef17aac-c3c9-4918-a8c2-ce86ba1bb394.png)
+The list of todo's is long but managable. 
 
-Features:
+Reference material is meant to serve as a way for me to not only learn, through writing, but also through rereading in a future date. 
+This means I will learn a subject through writing about it, then verify all of the information and publish it to the blog. This material 
+will have a reference tag if I think it will be valuable to myself and others. For example, if I were to study for an A+ certification then 
+I can create a list of terms and definitions in the reference tag. This allows me to remember through note taking as well as providing a 
+useful study material. 
 
-- ✅ Minimal styling (make it your own!)
-- ✅ 100/100 Lighthouse performance
-- ✅ SEO-friendly with canonical URLs and OpenGraph data
-- ✅ Sitemap support
-- ✅ RSS Feed support
-- ✅ Markdown & MDX support
+Things I am learning serves to show my progress as I learn. It is a valuable exercise to look back on how far you have come. This is 
+espescially true for battling imposter syndrome and boosting confidence. It can also help others with similar problems. I don't consider this
+referece material since I might not actually verify that the information is 100% correct or best practice. I can also use this space to 
+post about things I am building with wood, metal, hardware, or software. This is a mix of documenting progress and having fun with building,
+in the rare case I get a chance. 
 
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```
-├── public/
-├── src/
-│   ├── components/
-│   ├── content/
-│   ├── layouts/
-│   └── pages/
-├── astro.config.mjs
-├── README.md
-├── package.json
-└── tsconfig.json
-```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-The `src/content/` directory contains "collections" of related Markdown and MDX documents. Use `getCollection()` to retrieve posts from `src/content/blog/`, and type-check your frontmatter using an optional schema. See [Astro's Content Collections docs](https://docs.astro.build/en/guides/content-collections/) to learn more.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                | Action                                           |
-| :--------------------- | :----------------------------------------------- |
-| `npm install`          | Installs dependencies                            |
-| `npm run dev`          | Starts local dev server at `localhost:3000`      |
-| `npm run build`        | Build your production site to `./dist/`          |
-| `npm run preview`      | Preview your build locally, before deploying     |
-| `npm run astro ...`    | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Check out [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
-
-## Credit
-
-This theme is based off of the lovely [Bear Blog](https://github.com/HermanMartinus/bearblog/).
+Things I find interesting serves as a way to share my interests and show I am human. I enjoy thinking and sharing thoughts with others. 
+This is where a comment section will come in handy. What's the point of sharing if you can't have discourse right? This isn't meant as a way
+to spread any narrative, but instead as a way to share on how certain things make me feel. It also allows me to share about books and movies
+I consume, audio gear and hardware I have or want, and strange things. 
