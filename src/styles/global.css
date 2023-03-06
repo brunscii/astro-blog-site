@@ -41,7 +41,6 @@ h1, h2, h3, h4, h5, h6, strong, b {
 
 	font-family: Verdana, sans-serif;
 	margin: 0 auto;
-	/* max-width: 100d; */
 	min-height: 100vh;
 
 	text-align: left;
@@ -53,17 +52,20 @@ h1, h2, h3, h4, h5, h6, strong, b {
 	grid-template-rows: auto 1fr auto;
 	justify-items: center;
 	/* flex-direction: column; */
-	max-width: 86ch;
+	max-width: 86ch
 }
 
 main {
 	/* justify-self: center; */
     margin-top: 8em;
 	padding: var(--document-pading);
+    max-width: 100vw;
+    overflow-x:auto;
+    box-sizing: border-box;
 }
 
 header{
-	width: calc(100% - 2 * var(--document-pading));
+	/* width: calc(100% - 2 * var(--document-pading)); */
 	padding: var(--document-pading)
 }
 
@@ -84,7 +86,7 @@ nav a {
 }
 
 textarea {
-	width: 100%;
+	max-width: 100%;
 	font-size: 16px;
 }
 
@@ -97,7 +99,7 @@ content {
 }
 
 table {
-	width: 100%;
+	max-width: 100%;
 }
 
 img {

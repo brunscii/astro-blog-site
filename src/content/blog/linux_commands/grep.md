@@ -9,7 +9,8 @@ draft: false
 
 ## What is GREP
 
-**GREP** stands for **G**lobal **R**egular **E**xpresion **P**rint. While the name does sound like grep would actually print out regular expressions, or regex for short, but it actually prints out matches to those regular expressions.
+**GREP** stands for **G**lobal **R**egular **E**xpresion **P**rint. While the name does sound like grep would actually 
+print out regular expressions, or regex for short, but it actually prints out matches to those regular expressions.
 
 Grep a powerful yet rarely understood tool that is used to match patterns.
 
