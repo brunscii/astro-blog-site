@@ -7,11 +7,15 @@ pubDate: '03/03/2023'
 
 ## What is this?
 
-Have you ever looked something up only to realize that it's something that you have learned before? This is a place for me to put notes that I can look back on as a refresher. The information I post here may be helpful to others but it mainly just my musings and thoughts. The main focus is probably going to be programming or tech in general. For sure there will be deep dives into command-line tools and programming features.  
+Have you ever looked something up only to realize that it's something that you have looked up before? With so much information in tech, it's easy to forget what we don't use. 
+
+This is a place for me to put notes that I can look back on as a refresher. The information I post here may be helpful to others but it mainly just my musings and thoughts. The main focus is probably going to be programming or tech in general. There will definitely be deep dives into command-line tools and programming features, pretty much anything that I don't use on the daily or am likily to forget.
 
 ## Why a blog?
 
-Simply put, I like writing in markdown and it makes for a decent style of blog. Writing is satisfying and it allows me to organize my thoughts. Writing this information down forces me to structure the information first. It also makes me dive deeper into concepts than I normally would. Between these two things, I hope that it will help me to retain information better. If not, then at least I will have a quick not on what information I forgot.
+Simply put, I like writing in markdown and it makes for a decent style of blog. Writing is satisfying and it allows me to organize my thoughts. Writing it down helps me structure the information. It also makes me dive deeper into concepts than I normally would. Between these two things, heopefully I will retain information better, and maybe help others along the way. If not, then at least I will have a quick note I can reference later.
+
+Another reason is that blogs are short and easy. This isn't me writing a book on these topics. The goal is to make short, structured notes. The blog format is also ideal for writing opinion pieces, reviews, and short articles.
 
 ## Formatting
 
@@ -54,29 +58,5 @@ There are a few things I'll try to stick to.
 
 That being said, not all of this will be tech documents and tutorials. This will probably also have a section for reviews, commentary, and things I think are cool.
 
-Using markdown for this means I can use the same formatting for each blog via CSS. If need be, we could also create a separate style for each blog by displaying them as a class using the file name. This is just a speculation for now though. I still have to make the blog display so who knows what will happen. 
+=>>> This is a work in progress <<<=
 
-## Work in progress
-
----
-
-> Frontend: 
-> - REACT
-> - SCSS
-> - marked? some form of markdown converter library or API
-> - State Management:
->   - Redux
->   - Context API
-
-> Backend: 
-> - Node
-> - express
-> - next.js
-
-> Services:
-> - Hosting platform:
->   - hostzinger
->   - squarespace
-
-
----
