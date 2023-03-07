@@ -5,11 +5,17 @@ description: 'Deployment Image Servicing and Management'
 
 ## What is DISM
 
-**DISM** is a an acronym for **Deployment Image Servicing and Management**. It is a command line tool for (un)installing, updating, and configuring windows features in a windows image. DISM can be used to capture, split, and manage .wim files, which hold windows images. 
+**DISM** is a an acronym for **Deployment Image Servicing and Management**. It is a command line tool for (un)installing, updating, 
+and configuring windows features in an image. DISM can be used to capture, split, and manage .wim files, which hold windows images. What's an image?
+Image files are a way of representing a disk, more on that later. 
 
-Basically DISM is a swiss army knif utility that allows you to modify your copy of windows from the command line. This is a powerful tool that allows you to customize the operating system in ways that aren't available in the system itself. I have seen is used to install packages, fix the operating system, and remove unwanted features. This is a great tool shrouded in mystery. Let's take a deeper look and unwrap this windows gem. 
+DISM is a powerful utility that allows you to modify your copy of windows from the command line. This allows you to customize the operating 
+system in ways that aren't available in the system itself. I have used it to install packages, fix the operating system, and remove unwanted features. 
+This is a great tool shrouded in mystery so let's take a deeper look and unwrap this windows gem. 
 
-One thing I always like to do is try the command out first. In linux I would run `man` to get the manual pages but in windows you can often run the command with no options or with `/?` to get information on the command itself. This allows us (in most cases) to see a list of options for the command, a syntax for how to use the command, and any required arguments. This is what I got when I ran `DISM` in the windows terminal. PowerShell to be more precise.
+One thing I always like to do is try the command out first. In linux I would run `man` to get the manual pages but in windows you can often run the 
+command with no options or with `/?` to get information on the command itself. This allows us (in most cases) to see a list of options for the command.
+It also provides a syntax for how to use the command and any required arguments. This is what I got when I ran `DISM` in the windows terminal.
 
 
     
@@ -143,13 +149,22 @@ We know the FFU capture commands from the above output.
 
 ### What is a WIM?
 
-A **WIM** is a file that uses **Windows Imaging Format**. It is a **W**indows **IM**age that works by creating a single disk image. This disk image can contain files and folders as well as the operating system. This first came with windows in Vista and allowed for a better customization of the disk image before deployment. You can also boot and run a **WIM**. 
+A **WIM**, as previously stated, is a file that uses **Windows Imaging Format**. It is a **W**indows **IM**age, or multiple, in a single disk image. 
+This first came with windows in Vista and allowed for a better customization of the disk image before deployment. You can also boot and run a **WIM**. 
+Most images are sector based like drives. WIM files on the other hand are file based. 
+
+Many WIM files will contain multiple copies of windows. For instance, the Windows install disk actually contains all of the copies of the desktop version.
+Windows s, Home, Professional can all be on the same disk. That's why you can install either version from one disk. It has been like this since at least Windows Vista. 
+I remeber the disks that came with laptops often had each version and you would have to choose based on you key if you reinstalled. --Perhaps that's just me showing my age.
+
+In the Vista days there was a took called ImageX. It was used to customized the OS for OEM builds. This meant that manufacturers could add
+drivers, or bloatware, straight on the installer. ImageX was replaced with DISM in later versions of Windows. 
 
 Windows Vista and 7 used ImageX to create **WIM** files.
 
 Windows 8 and later can use **DISM** to create and modify **WIM** files.
 
-*Fun Fact: I vaguely remember using Norton Ghost in IT to create disk images that would be deployed to the many computers over the network using GhostCast and PXE boot.*
+*I vaguely remember using Norton Ghost in IT to create disk images that would be deployed to the many computers over the network using GhostCast and PXE boot. The more modern approach is to use Windows server to set up a PXE server. This is done using WIM files of the windows installer.*
 
 As with the **FFU** commands, we can see that our **WIM** commands are as follows:
 
