@@ -1,8 +1,3 @@
-/*
-  The CSS in this style tag is based off of Bear Blog's default CSS.
-  https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
-  License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
- */
 
 :root{
 	--background-color: #ccc;
@@ -41,7 +36,6 @@ h1, h2, h3, h4, h5, h6, strong, b {
 
 	font-family: Verdana, sans-serif;
 	margin: 0 auto;
-	/* max-width: 100d; */
 	min-height: 100vh;
 
 	text-align: left;
@@ -53,13 +47,16 @@ h1, h2, h3, h4, h5, h6, strong, b {
 	grid-template-rows: auto 1fr auto;
 	justify-items: center;
 	/* flex-direction: column; */
-	max-width: 86ch;
+	max-width: 86ch
 }
 
 main {
 	/* justify-self: center; */
     margin-top: 8em;
 	padding: var(--document-pading);
+    max-width: 100vw;
+    overflow-x:auto;
+    box-sizing: border-box;
 }
 
 header{
@@ -84,7 +81,7 @@ nav a {
 }
 
 textarea {
-	width: 100%;
+	max-width: 100%;
 	font-size: 16px;
 }
 
@@ -97,7 +94,7 @@ content {
 }
 
 table {
-	width: 100%;
+	max-width: 100%;
 }
 
 img {
