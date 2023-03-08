@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en" class="astro-BVZIHDZO">
+	<head>
+		<!-- Global Metadata --><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta name="generator" content="Astro v2.0.16">
+
+<!-- Primary Meta Tags -->
+<title>What is DISM</title>
+<meta name="title" content="What is DISM">
+<meta name="description" content="Deployment Image Servicing and Management">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://brunscii.github.io/astro-blog-site/blog/dism/whatisdism/">
+<meta property="og:title" content="What is DISM">
+<meta property="og:description" content="Deployment Image Servicing and Management">
+<meta property="og:image" content="https://brunscii.github.io/placeholder-social.jpg">
+
+		
+		
+	<link rel="stylesheet" href="/astro-blog-site/_astro/_...slug_.d7ec7cc9.css" />
+<link rel="stylesheet" href="/astro-blog-site/_astro/HeaderLink.astro_astro_type_style_index_0_lang.c3840210.css" />
+<link rel="stylesheet" href="/astro-blog-site/_astro/_...slug_.3f4867e1.css" /></head>
+
+	<body class="astro-BVZIHDZO">
+		<header class="astro-3EF6KSR2">
+	<h1 class="astro-3EF6KSR2">
+		Chris C&#39;s Blog
+	</h1>
+	<nav class="astro-3EF6KSR2">
+		<a href="{BASE}/" class="astro-3EF6KSR2 astro-EIMMU3LG">
+	Home
+</a>
+		<a href="{BASE}/blog" class="astro-3EF6KSR2 astro-EIMMU3LG">
+	Blog
+</a>
+		<a href="{BASE}/about" class="astro-3EF6KSR2 astro-EIMMU3LG">
+	About
+</a>
+		<a href="https://christopherjcarlin.com" class="astro-3EF6KSR2 astro-EIMMU3LG" target="_blank">
+	Portfolio
+</a>
+		<a href="https://github.com/brunscii" class="astro-3EF6KSR2 astro-EIMMU3LG" target="_blank">
+	GitHub
+</a>
+	</nav>
+</header>
+		<main class="astro-BVZIHDZO">
+			<article class="astro-BVZIHDZO">
+				
+				
+				<h1 class="title astro-BVZIHDZO">What is DISM</h1>
+
+				
+				
+				<hr class="astro-BVZIHDZO">
+				<h2 id="what-is-dism">What is DISM</h2>
+<p><strong>DISM</strong> is a an acronym for <strong>Deployment Image Servicing and Management</strong>. It is a command line tool for (un)installing, updating,
+and configuring windows features in an image. DISM can be used to capture, split, and manage .wim files, which hold windows images. What’s an image?
+Image files are a way of representing a disk, more on that later.</p>
+<p>DISM is a powerful utility that allows you to modify your copy of windows from the command line. This allows you to customize the operating
+system in ways that aren’t available in the system itself. I have used it to install packages, fix the operating system, and remove unwanted features.
+This is a great tool shrouded in mystery so let’s take a deeper look and unwrap this windows gem.</p>
+<p>One thing I always like to do is try the command out first. In linux I would run <code>man</code> to get the manual pages but in windows you can often run the
+command with no options or with <code>/?</code> to get information on the command itself. This allows us (in most cases) to see a list of options for the command.
+It also provides a syntax for how to use the command and any required arguments. This is what I got when I ran <code>DISM</code> in the windows terminal.</p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #c9d1d9">Deployment Image Servicing and Management tool</span></span>
+<span class="line"><span style="color: #c9d1d9">Version: 10.0.22621.1</span></span>
+<span class="line"><span style="color: #c9d1d9"></span></span>
+<span class="line"><span style="color: #c9d1d9"></span></span>
+<span class="line"><span style="color: #c9d1d9">DISM.exe [dism_options] {Imaging_command} [&#x3C;Imaging_arguments>]</span></span>
+<span class="line"><span style="color: #c9d1d9">DISM.exe {/Image:&#x3C;path_to_offline_image> | /Online} [dism_options] </span></span>
+<span class="line"><span style="color: #c9d1d9">        {servicing_command} [&#x3C;servicing_arguments>]</span></span>
+<span class="line"><span style="color: #c9d1d9"></span></span>
+<span class="line"><span style="color: #c9d1d9">DESCRIPTION:</span></span>
+<span class="line"><span style="color: #c9d1d9"></span></span>
+<span class="line"><span style="color: #c9d1d9">DISM enumerates, installs, uninstalls, configures, and updates features</span></span>
+<span class="line"><span style="color: #c9d1d9">and packages in Windows images. The commands that are available depend </span></span>
+<span class="line"><span style="color: #c9d1d9">on the image being serviced and whether the image is offline or running.</span></span>
+<span class="line"><span style="color: #c9d1d9"></span></span>
+<span class="line"><span style="color: #c9d1d9">****</span></span>
+<span class="line"><span style="color: #c9d1d9">FFU COMMANDS:</span></span>
+<span class="line"><span style="color: #c9d1d9"></span></span>
+<span class="line"><span style="color: #c9d1d9">/Capture-Ffu            - Captures a physical disk image into a new FFU file.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Apply-Ffu              - Applies an .ffu image.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Split-Ffu              - Splits an existing .ffu file into multiple read-only</span></span>
+<span class="line"><span style="color: #c9d1d9">                            split FFU files.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Optimize-Ffu           - Optimizes a FFU file so that it can be applied to storage </span></span>
+<span class="line"><span style="color: #c9d1d9">                            of a different size.</span></span>
+<span class="line"><span style="color: #c9d1d9"></span></span>
+<span class="line"><span style="color: #c9d1d9">WIM COMMANDS:</span></span>
+<span class="line"><span style="color: #c9d1d9"></span></span>
+<span class="line"><span style="color: #c9d1d9">/Apply-CustomDataImage  - Dehydrates files contained in the custom data image.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Capture-CustomImage    - Captures customizations into a delta WIM file on a </span></span>
+<span class="line"><span style="color: #c9d1d9">                            WIMBoot system. Captured directories include all </span></span>
+<span class="line"><span style="color: #c9d1d9">                            subfolders and data.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Get-WIMBootEntry       - Displays WIMBoot configuration entries for the </span></span>
+<span class="line"><span style="color: #c9d1d9">                            specified disk volume.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Update-WIMBootEntry    - Updates WIMBoot configuration entry for the </span></span>
+<span class="line"><span style="color: #c9d1d9">                            specified disk volume.</span></span>
+<span class="line"><span style="color: #c9d1d9">/List-Image             - Displays a list of the files and folders in a </span></span>
+<span class="line"><span style="color: #c9d1d9">                            specified image.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Delete-Image           - Deletes the specified volume image from a WIM file</span></span>
+<span class="line"><span style="color: #c9d1d9">                            that has multiple volume images.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Export-Image           - Exports a copy of the specified image to another</span></span>
+<span class="line"><span style="color: #c9d1d9">                            file.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Append-Image           - Adds another image to a WIM file.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Capture-Image          - Captures an image of a drive into a new WIM file.</span></span>
+<span class="line"><span style="color: #c9d1d9">                            Captured directories include all subfolders and </span></span>
+<span class="line"><span style="color: #c9d1d9">                            data.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Get-MountedWimInfo     - Displays information about mounted WIM images.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Get-WimInfo            - Displays information about images in a WIM file.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Commit-Wim             - Saves changes to a mounted WIM image.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Unmount-Wim            - Unmounts a mounted WIM image.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Mount-Wim              - Mounts an image from a WIM file.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Remount-Wim            - Recovers an orphaned WIM mount directory.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Cleanup-Wim            - Deletes resources associated with mounted WIM </span></span>
+<span class="line"><span style="color: #c9d1d9">                            images that are corrupted.</span></span>
+<span class="line"><span style="color: #c9d1d9"></span></span>
+<span class="line"><span style="color: #c9d1d9">GENERIC IMAGING COMMANDS:</span></span>
+<span class="line"><span style="color: #c9d1d9"></span></span>
+<span class="line"><span style="color: #c9d1d9">/Split-Image            - Splits an existing .wim file into multiple </span></span>
+<span class="line"><span style="color: #c9d1d9">                            read-only split WIM (SWM) files.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Apply-Image            - Applies an image.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Get-MountedImageInfo   - Displays information about mounted WIM and VHD</span></span>
+<span class="line"><span style="color: #c9d1d9">                            images.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Get-ImageInfo          - Displays information about images in a WIM, a VHD</span></span>
+<span class="line"><span style="color: #c9d1d9">                            or a FFU file.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Commit-Image           - Saves changes to a mounted WIM or VHD image.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Unmount-Image          - Unmounts a mounted WIM or VHD image.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Mount-Image            - Mounts an image from a WIM or VHD file.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Remount-Image          - Recovers an orphaned image mount directory.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Cleanup-Mountpoints    - Deletes resources associated with corrupted</span></span>
+<span class="line"><span style="color: #c9d1d9">                            mounted images.</span></span>
+<span class="line"><span style="color: #c9d1d9"></span></span>
+<span class="line"><span style="color: #c9d1d9">IMAGE SPECIFICATIONS:</span></span>
+<span class="line"><span style="color: #c9d1d9"></span></span>
+<span class="line"><span style="color: #c9d1d9">/Online                 - Targets the running operating system.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Image                  - Specifies the path to the root directory of an</span></span>
+<span class="line"><span style="color: #c9d1d9">                            offline Windows image.</span></span>
+<span class="line"><span style="color: #c9d1d9"></span></span>
+<span class="line"><span style="color: #c9d1d9">DISM OPTIONS:</span></span>
+<span class="line"><span style="color: #c9d1d9"></span></span>
+<span class="line"><span style="color: #c9d1d9">/English                - Displays command line output in English.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Format                 - Specifies the report output format.</span></span>
+<span class="line"><span style="color: #c9d1d9">/WinDir                 - Specifies the path to the Windows directory.</span></span>
+<span class="line"><span style="color: #c9d1d9">/SysDriveDir            - Specifies the path to the system-loader file named</span></span>
+<span class="line"><span style="color: #c9d1d9">                            BootMgr.</span></span>
+<span class="line"><span style="color: #c9d1d9">/LogPath                - Specifies the logfile path.</span></span>
+<span class="line"><span style="color: #c9d1d9">/LogLevel               - Specifies the output level shown in the log (1-4).</span></span>
+<span class="line"><span style="color: #c9d1d9">/NoRestart              - Suppresses automatic reboots and reboot prompts.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Quiet                  - Suppresses all output except for error messages.</span></span>
+<span class="line"><span style="color: #c9d1d9">/ScratchDir             - Specifies the path to a scratch directory.</span></span>
+<span class="line"><span style="color: #c9d1d9"></span></span>
+<span class="line"><span style="color: #c9d1d9">For more information about these DISM options and their arguments, specify an</span></span>
+<span class="line"><span style="color: #c9d1d9">option immediately before /?.</span></span>
+<span class="line"><span style="color: #c9d1d9"></span></span>
+<span class="line"><span style="color: #c9d1d9">Examples:     </span></span>
+<span class="line"><span style="color: #c9d1d9">    DISM.exe /Mount-Wim /?</span></span>
+<span class="line"><span style="color: #c9d1d9">    DISM.exe /ScratchDir /?</span></span>
+<span class="line"><span style="color: #c9d1d9">    DISM.exe /Image:C:\test\offline /?</span></span>
+<span class="line"><span style="color: #c9d1d9">    DISM.exe /Online /?</span></span></code></pre>
+<p>Let’s take a minute to parse this information.</p>
+<h3 id="dism-command-structure">DISM Command Structure</h3>
+<blockquote>
+<p>DISM.exe [dism_options] {Imaging_command} [&#x3C;Imaging_arguments>]</p>
+</blockquote>
+<p>We can say that DISM works by taking a list of options as most programs do. It then accepts a <code>Imaging_command</code> and a list of <code>Image_arguments</code>.</p>
+<p>We know from the description above that the <code>Imaging_command</code> is sorted into three groups: <code>FFU COMMANDS</code>, <code>WIM COMMANDS</code>, and <code>GENERIC IMAGING COMMANDS</code>.</p>
+<blockquote>
+<p>DISM.exe {/Image:&#x3C;path_to_offline_image> | /Online} [dism_options] {servicing_command} [&#x3C;servicing_arguments>]</p>
+</blockquote>
+<p>In this structure we either choose an offline image or a use <code>/Online</code> to signify that we are working on the running copy of windows. <em><strong>Not all of the servicing commands work on online images, aka running machines.</strong></em></p>
+<h3 id="what-is-a-ffu">What is a FFU?</h3>
+<p>A <strong>FFU</strong> is a <strong>Full Flash Update</strong> and it is a image that allows you to deploy a physical disk’s image to another drive. It includes windows, system partition information, and recovery information.</p>
+<p>We know the FFU capture commands from the above output.</p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #c9d1d9">/Capture-Ffu            - Captures a physical disk image into a new FFU file.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Apply-Ffu              - Applies an .ffu image.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Split-Ffu              - Splits an existing .ffu file into multiple read-only</span></span>
+<span class="line"><span style="color: #c9d1d9">                            split FFU files.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Optimize-Ffu           - Optimizes a FFU file so that it can be applied to storage </span></span>
+<span class="line"><span style="color: #c9d1d9">                            of a different size.</span></span></code></pre>
+<h3 id="what-is-a-wim">What is a WIM?</h3>
+<p>A <strong>WIM</strong>, as previously stated, is a file that uses <strong>Windows Imaging Format</strong>. It is a <strong>W</strong>indows <strong>IM</strong>age, or multiple, in a single disk image.
+This first came with windows in Vista and allowed for a better customization of the disk image before deployment. You can also boot and run a <strong>WIM</strong>.
+Most images are sector based like drives. WIM files on the other hand are file based.</p>
+<p>Many WIM files will contain multiple copies of windows. For instance, the Windows install disk actually contains all of the copies of the desktop version.
+Windows s, Home, Professional can all be on the same disk. That’s why you can install either version from one disk. It has been like this since at least Windows Vista.
+I remeber the disks that came with laptops often had each version and you would have to choose based on you key if you reinstalled. —Perhaps that’s just me showing my age.</p>
+<p>In the Vista days there was a took called ImageX. It was used to customized the OS for OEM builds. This meant that manufacturers could add
+drivers, or bloatware, straight on the installer. ImageX was replaced with DISM in later versions of Windows.</p>
+<p>Windows Vista and 7 used ImageX to create <strong>WIM</strong> files.</p>
+<p>Windows 8 and later can use <strong>DISM</strong> to create and modify <strong>WIM</strong> files.</p>
+<p><em>I vaguely remember using Norton Ghost in IT to create disk images that would be deployed to the many computers over the network using GhostCast and PXE boot. The more modern approach is to use Windows server to set up a PXE server. This is done using WIM files of the windows installer.</em></p>
+<p>As with the <strong>FFU</strong> commands, we can see that our <strong>WIM</strong> commands are as follows:</p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #c9d1d9">WIM COMMANDS:</span></span>
+<span class="line"><span style="color: #c9d1d9"></span></span>
+<span class="line"><span style="color: #c9d1d9">/Apply-CustomDataImage  - Dehydrates files contained in the custom data image.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Capture-CustomImage    - Captures customizations into a delta WIM file on a </span></span>
+<span class="line"><span style="color: #c9d1d9">                            WIMBoot system. Captured directories include all </span></span>
+<span class="line"><span style="color: #c9d1d9">                            subfolders and data.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Get-WIMBootEntry       - Displays WIMBoot configuration entries for the </span></span>
+<span class="line"><span style="color: #c9d1d9">                            specified disk volume.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Update-WIMBootEntry    - Updates WIMBoot configuration entry for the </span></span>
+<span class="line"><span style="color: #c9d1d9">                            specified disk volume.</span></span>
+<span class="line"><span style="color: #c9d1d9">/List-Image             - Displays a list of the files and folders in a </span></span>
+<span class="line"><span style="color: #c9d1d9">                            specified image.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Delete-Image           - Deletes the specified volume image from a WIM file</span></span>
+<span class="line"><span style="color: #c9d1d9">                            that has multiple volume images.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Export-Image           - Exports a copy of the specified image to another</span></span>
+<span class="line"><span style="color: #c9d1d9">                            file.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Append-Image           - Adds another image to a WIM file.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Capture-Image          - Captures an image of a drive into a new WIM file.</span></span>
+<span class="line"><span style="color: #c9d1d9">                            Captured directories include all subfolders and </span></span>
+<span class="line"><span style="color: #c9d1d9">                            data.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Get-MountedWimInfo     - Displays information about mounted WIM images.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Get-WimInfo            - Displays information about images in a WIM file.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Commit-Wim             - Saves changes to a mounted WIM image.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Unmount-Wim            - Unmounts a mounted WIM image.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Mount-Wim              - Mounts an image from a WIM file.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Remount-Wim            - Recovers an orphaned WIM mount directory.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Cleanup-Wim            - Deletes resources associated with mounted WIM </span></span>
+<span class="line"><span style="color: #c9d1d9">                            images that are corrupted.</span></span></code></pre>
+<h3 id="generic-imaging-commands">Generic imaging commands?</h3>
+<p>They provide a set of options for working with images despite their type.</p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #c9d1d9">GENERIC IMAGING COMMANDS:</span></span>
+<span class="line"><span style="color: #c9d1d9"></span></span>
+<span class="line"><span style="color: #c9d1d9">/Split-Image            - Splits an existing .wim file into multiple </span></span>
+<span class="line"><span style="color: #c9d1d9">                            read-only split WIM (SWM) files.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Apply-Image            - Applies an image.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Get-MountedImageInfo   - Displays information about mounted WIM and VHD</span></span>
+<span class="line"><span style="color: #c9d1d9">                            images.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Get-ImageInfo          - Displays information about images in a WIM, a VHD</span></span>
+<span class="line"><span style="color: #c9d1d9">                            or a FFU file.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Commit-Image           - Saves changes to a mounted WIM or VHD image.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Unmount-Image          - Unmounts a mounted WIM or VHD image.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Mount-Image            - Mounts an image from a WIM or VHD file.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Remount-Image          - Recovers an orphaned image mount directory.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Cleanup-Mountpoints    - Deletes resources associated with corrupted</span></span>
+<span class="line"><span style="color: #c9d1d9">                            mounted images.</span></span></code></pre>
+<h2 id="using-dism-online">Using DISM “Online”</h2>
+<p>As we previously stated, using DISM online is using it on the currently running version of windows. This is an incredibly useful tool for working on the current system without having to redeploy or reimage.</p>
+<p>As with the <code>DISM /?</code> command we can also get manual pages from specific parts of the DISM command. For instance, <code>DISM /online /?</code> will produce the following:</p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #c9d1d9">Deployment Image Servicing and Management tool</span></span>
+<span class="line"><span style="color: #c9d1d9">Version: 10.0.22621.1</span></span>
+<span class="line"><span style="color: #c9d1d9"></span></span>
+<span class="line"><span style="color: #c9d1d9">Image Version: 10.0.22621.963</span></span>
+<span class="line"><span style="color: #c9d1d9"></span></span>
+<span class="line"><span style="color: #c9d1d9"></span></span>
+<span class="line"><span style="color: #c9d1d9">The following commands may be used to service the image:</span></span>
+<span class="line"><span style="color: #c9d1d9"></span></span>
+<span class="line"><span style="color: #c9d1d9">OS UNINSTALL SERVICING COMMANDS:</span></span>
+<span class="line"><span style="color: #c9d1d9"></span></span>
+<span class="line"><span style="color: #c9d1d9">/Set-OSUninstallWindow  - Sets the OS Uninstall Window.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Get-OSUninstallWindow  - Gets the OS Uninstall Window.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Remove-OSUninstall     - Remove the OS Uninstall.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Initiate-OSUninstall   - Initiates the OS Uninstall</span></span>
+<span class="line"><span style="color: #c9d1d9"></span></span>
+<span class="line"><span style="color: #c9d1d9">APPX SERVICING COMMANDS:</span></span>
+<span class="line"><span style="color: #c9d1d9"></span></span>
+<span class="line"><span style="color: #c9d1d9">/Get-NonRemovableAppPolicy - Lists the package families configured </span></span>
+<span class="line"><span style="color: #c9d1d9">                            to be nonremovable by enterprise policy.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Set-NonRemovableAppPolicy - Sets enterprise nonremovable policy for </span></span>
+<span class="line"><span style="color: #c9d1d9">                            a given package family. </span></span>
+<span class="line"><span style="color: #c9d1d9">/Optimize-ProvisionedAppxPackages - Optimizes provisioned appx footprint by </span></span>
+<span class="line"><span style="color: #c9d1d9">                            hard-linking identical files across appx packages.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Set-ProvisionedAppxDataFile - Places custom data into the specified app </span></span>
+<span class="line"><span style="color: #c9d1d9">                            package (.appx or .appxbundle). The specified  </span></span>
+<span class="line"><span style="color: #c9d1d9">                            application package must already be in the image.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Remove-ProvisionedAppxPackage - Removes app packages (.appx or .appxbundle)</span></span>
+<span class="line"><span style="color: #c9d1d9">                            from the image. App packages will not be installed </span></span>
+<span class="line"><span style="color: #c9d1d9">                            when new user accounts are created.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Add-ProvisionedAppxPackage - Adds app packages (.appx or .appxbundle) to the</span></span>
+<span class="line"><span style="color: #c9d1d9">                            image and sets them to install for each new user.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Get-ProvisionedAppxPackages - Displays information about app packages </span></span>
+<span class="line"><span style="color: #c9d1d9">                            (.appx or .appxbundle) in an image that are </span></span>
+<span class="line"><span style="color: #c9d1d9">                            set to install for each new user.</span></span>
+<span class="line"><span style="color: #c9d1d9"></span></span>
+<span class="line"><span style="color: #c9d1d9">PACKAGE SERVICING COMMANDS:</span></span>
+<span class="line"><span style="color: #c9d1d9"></span></span>
+<span class="line"><span style="color: #c9d1d9">/Add-Package            - Adds packages to the image.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Remove-Package         - Removes packages from the image.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Enable-Feature         - Enables a specific feature in the image.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Disable-Feature        - Disables a specific feature in the image.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Get-Packages           - Displays information about all packages in </span></span>
+<span class="line"><span style="color: #c9d1d9">                            the image.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Get-PackageInfo        - Displays information about a specific package.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Get-Features           - Displays information about all features in</span></span>
+<span class="line"><span style="color: #c9d1d9">                            a package.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Get-FeatureInfo        - Displays information about a specific feature.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Cleanup-Image          - Performs cleanup and recovery operations on the</span></span>
+<span class="line"><span style="color: #c9d1d9">                            image.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Export-Source          - Export a set of capabilities into a new repository.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Add-Capability         - Add one or more capabilities to an image.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Remove-Capability      - Remove a capability from one image.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Get-Capabilities       - Get capabilities in the image.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Get-CapabilityInfo     - Get information of a capability in the image.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Get-ReservedStorageState - Gets the current state of reserved storage.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Set-ReservedStorageState - Sets the state of reserved storage.</span></span>
+<span class="line"><span style="color: #c9d1d9"></span></span>
+<span class="line"><span style="color: #c9d1d9">OS GENERAL COMMANDS:</span></span>
+<span class="line"><span style="color: #c9d1d9"></span></span>
+<span class="line"><span style="color: #c9d1d9">/Optimize-Image         - Performs specified configurations to an offline </span></span>
+<span class="line"><span style="color: #c9d1d9">                            image.</span></span>
+<span class="line"><span style="color: #c9d1d9"></span></span>
+<span class="line"><span style="color: #c9d1d9">DRIVER SERVICING COMMANDS:</span></span>
+<span class="line"><span style="color: #c9d1d9"></span></span>
+<span class="line"><span style="color: #c9d1d9">/Remove-Driver          - Removes driver packages from an offline image.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Add-Driver             - Adds driver packages to an offline image.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Get-DriverInfo         - Displays information about a specific driver</span></span>
+<span class="line"><span style="color: #c9d1d9">                            in an offline image or a running operating system.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Get-Drivers            - Displays information about all drivers in</span></span>
+<span class="line"><span style="color: #c9d1d9">                            an offline image or a running operating system.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Export-Driver          - Export all third-party driver packages from an</span></span>
+<span class="line"><span style="color: #c9d1d9">                            offline image or a running operating system.</span></span>
+<span class="line"><span style="color: #c9d1d9"></span></span>
+<span class="line"><span style="color: #c9d1d9">APPLICATION SERVICING COMMANDS:</span></span>
+<span class="line"><span style="color: #c9d1d9"></span></span>
+<span class="line"><span style="color: #c9d1d9">/Check-AppPatch         - Displays information if the MSP patches are </span></span>
+<span class="line"><span style="color: #c9d1d9">                            applicable to the mounted image.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Get-AppPatchInfo       - Displays information about installed MSP patches.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Get-AppPatches         - Displays information about all applied MSP patches</span></span>
+<span class="line"><span style="color: #c9d1d9">                            for all installed applications.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Get-AppInfo            - Displays information about a specific installed MSI</span></span>
+<span class="line"><span style="color: #c9d1d9">                            application.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Get-Apps               - Displays information about all installed MSI</span></span>
+<span class="line"><span style="color: #c9d1d9">                            applications.</span></span>
+<span class="line"><span style="color: #c9d1d9"></span></span>
+<span class="line"><span style="color: #c9d1d9">DEFAULT ASSOCIATIONS COMMANDS:</span></span>
+<span class="line"><span style="color: #c9d1d9"></span></span>
+<span class="line"><span style="color: #c9d1d9">/Remove-DefaultAppAssociations - Removes the default application associations</span></span>
+<span class="line"><span style="color: #c9d1d9">                            from a Windows image.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Import-DefaultAppAssociations - Imports a set of default application </span></span>
+<span class="line"><span style="color: #c9d1d9">                            associations to a Windows image.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Get-DefaultAppAssociations - Displays the list of default application </span></span>
+<span class="line"><span style="color: #c9d1d9">                            associations from a Windows image.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Export-DefaultAppAssociations - Exports the default application associations</span></span>
+<span class="line"><span style="color: #c9d1d9">                            from a running operating system.</span></span>
+<span class="line"><span style="color: #c9d1d9"></span></span>
+<span class="line"><span style="color: #c9d1d9">INTERNATIONAL SERVICING COMMANDS:</span></span>
+<span class="line"><span style="color: #c9d1d9"></span></span>
+<span class="line"><span style="color: #c9d1d9">/Set-SysUILang          - Sets the system UI language that is used</span></span>
+<span class="line"><span style="color: #c9d1d9">                            in the mounted offline image.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Set-LayeredDriver      - Sets keyboard layered driver.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Set-UILang             - Sets the default system UI language that is used</span></span>
+<span class="line"><span style="color: #c9d1d9">                            in the mounted offline image.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Set-UILangFallback     - Sets the fallback default language for the system </span></span>
+<span class="line"><span style="color: #c9d1d9">                            UI in the mounted offline image.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Set-UserLocale         - Sets the user locale in the mounted offline image.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Set-SysLocale          - Sets the language for non-Unicode programs (also</span></span>
+<span class="line"><span style="color: #c9d1d9">                            called system locale) and font settings in the </span></span>
+<span class="line"><span style="color: #c9d1d9">                            mounted offline image.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Set-InputLocale        - Sets the input locales and keyboard layouts to </span></span>
+<span class="line"><span style="color: #c9d1d9">                            use in the mounted offline image.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Set-TimeZone           - Sets the default time zone in the mounted offline</span></span>
+<span class="line"><span style="color: #c9d1d9">                            image.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Set-AllIntl            - Sets all international settings in the mounted</span></span>
+<span class="line"><span style="color: #c9d1d9">                            offline image.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Set-SKUIntlDefaults    - Sets all international settings to the default</span></span>
+<span class="line"><span style="color: #c9d1d9">                            values for the specified SKU language in the</span></span>
+<span class="line"><span style="color: #c9d1d9">                            mounted offline image.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Gen-LangIni            - Generates a new lang.ini file.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Set-SetupUILang        - Defines the default language that will be used</span></span>
+<span class="line"><span style="color: #c9d1d9">                            by setup.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Get-Intl               - Displays information about the international </span></span>
+<span class="line"><span style="color: #c9d1d9">                            settings and languages.</span></span>
+<span class="line"><span style="color: #c9d1d9"></span></span>
+<span class="line"><span style="color: #c9d1d9">UNATTEND SERVICING COMMANDS:</span></span>
+<span class="line"><span style="color: #c9d1d9"></span></span>
+<span class="line"><span style="color: #c9d1d9">/Apply-Unattend         - Applies an unattend file to an image.</span></span>
+<span class="line"><span style="color: #c9d1d9"></span></span>
+<span class="line"><span style="color: #c9d1d9">EDGE SERVICING COMMANDS:</span></span>
+<span class="line"><span style="color: #c9d1d9"></span></span>
+<span class="line"><span style="color: #c9d1d9">/Add-Edge               - Adds Edge to image.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Add-EdgeBrowser        - Adds Edge browser to image.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Add-EdgeWebView        - Adds Edge WebView to image.</span></span>
+<span class="line"><span style="color: #c9d1d9"></span></span>
+<span class="line"><span style="color: #c9d1d9">PROVISIONING PACKAGE SERVICING COMMANDS:</span></span>
+<span class="line"><span style="color: #c9d1d9"></span></span>
+<span class="line"><span style="color: #c9d1d9">/Get-ProvisioningPackageInfo - Gets the information of provisioning package.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Add-ProvisioningPackage - Adds provisioning package.</span></span>
+<span class="line"><span style="color: #c9d1d9"></span></span>
+<span class="line"><span style="color: #c9d1d9">WINDOWS EDITION SERVICING COMMANDS:</span></span>
+<span class="line"><span style="color: #c9d1d9"></span></span>
+<span class="line"><span style="color: #c9d1d9">/Set-ProductKey         - Sets the product key of the offline image.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Get-TargetEditions     - Displays a list of Windows editions that an image </span></span>
+<span class="line"><span style="color: #c9d1d9">                            can be upgraded to.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Get-CurrentEdition     - Displays the edition of the current image.</span></span>
+<span class="line"><span style="color: #c9d1d9">/Set-Edition            - Upgrades an image to a higher edition.</span></span>
+<span class="line"><span style="color: #c9d1d9"></span></span>
+<span class="line"><span style="color: #c9d1d9">For more information about these servicing commands and their arguments,</span></span>
+<span class="line"><span style="color: #c9d1d9">specify a command immediately before /?.</span></span>
+<span class="line"><span style="color: #c9d1d9"></span></span>
+<span class="line"><span style="color: #c9d1d9">    Examples: </span></span>
+<span class="line"><span style="color: #c9d1d9">        DISM.exe /Image:C:\test\offline /Apply-Unattend /?</span></span>
+<span class="line"><span style="color: #c9d1d9">        DISM.exe /Image:C:\test\offline /Get-Features /?</span></span>
+<span class="line"><span style="color: #c9d1d9">        DISM.exe /Online /Get-Drivers /?</span></span></code></pre>
+<p>Thus the rabbit hole deepins.</p>
+<hr>
+<h2 id="why-use-dism">Why Use DISM?</h2>
+<h3 id="repairing-windows">Repairing Windows</h3>
+<p><strong>DISM</strong> is used to repair or (un)install packages or to repair, install, or backup a windows image.</p>
+<p>Lets dive into the world of <code>DISM /cleanup-image</code>.</p>
+<p>Thanks to the help info, we know the following:</p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #c9d1d9">Deployment Image Servicing and Management tool</span></span>
+<span class="line"><span style="color: #c9d1d9">Version: 10.0.22621.1</span></span>
+<span class="line"><span style="color: #c9d1d9"></span></span>
+<span class="line"><span style="color: #c9d1d9">Image Version: 10.0.22621.963</span></span>
+<span class="line"><span style="color: #c9d1d9"></span></span>
+<span class="line"><span style="color: #c9d1d9"></span></span>
+<span class="line"><span style="color: #c9d1d9">/Cleanup-Image /RevertPendingActions </span></span>
+<span class="line"><span style="color: #c9d1d9"></span></span>
+<span class="line"><span style="color: #c9d1d9">WARNING! You should use the /RevertPendingActions option only in a </span></span>
+<span class="line"><span style="color: #c9d1d9">system-recovery scenario to perform recovery operations on a Windows image </span></span>
+<span class="line"><span style="color: #c9d1d9">that did not boot. </span></span>
+<span class="line"><span style="color: #c9d1d9"></span></span>
+<span class="line"><span style="color: #c9d1d9">    Example: </span></span>
+<span class="line"><span style="color: #c9d1d9">    DISM.exe /Image:C:\test\offline /Cleanup-Image /RevertPendingActions </span></span>
+<span class="line"><span style="color: #c9d1d9"></span></span>
+<span class="line"><span style="color: #c9d1d9">/Cleanup-Image /spsuperseded [/hidesp] </span></span>
+<span class="line"><span style="color: #c9d1d9">Use /SPSuperseded to remove any backup files created during the installation </span></span>
+<span class="line"><span style="color: #c9d1d9">of a service pack. Use /HideSP to prevent the service pack from being listed </span></span>
+<span class="line"><span style="color: #c9d1d9">in the Installed Updates for the operating system. </span></span>
+<span class="line"><span style="color: #c9d1d9"></span></span>
+<span class="line"><span style="color: #c9d1d9">WARNING! The service pack cannot be uninstalled after the /SPSuperseded </span></span>
+<span class="line"><span style="color: #c9d1d9">operation is completed. </span></span>
+<span class="line"><span style="color: #c9d1d9"></span></span>
+<span class="line"><span style="color: #c9d1d9">    Example: </span></span>
+<span class="line"><span style="color: #c9d1d9">    DISM.exe /Image:C:\test\offline /Cleanup-Image /spsuperseded /hidesp </span></span>
+<span class="line"><span style="color: #c9d1d9"></span></span>
+<span class="line"><span style="color: #c9d1d9">/Cleanup-Image {/CheckHealth | /ScanHealth | /RestoreHealth} </span></span>
+<span class="line"><span style="color: #c9d1d9">Use /CheckHealth to check whether the image has been flagged as corrupted </span></span>
+<span class="line"><span style="color: #c9d1d9">by a failed process and whether the corruption can be repaired. </span></span>
+<span class="line"><span style="color: #c9d1d9">Use /ScanHealth to scan the image for component store corruption. </span></span>
+<span class="line"><span style="color: #c9d1d9">Use /RestoreHealth to scan the image for component store corruption, and </span></span>
+<span class="line"><span style="color: #c9d1d9">then perform repair operations automatically. </span></span>
+<span class="line"><span style="color: #c9d1d9">Use /Source with /RestoreHealth to specify the location of known good </span></span>
+<span class="line"><span style="color: #c9d1d9">versions of files that can be used for the repair. For more information on </span></span>
+<span class="line"><span style="color: #c9d1d9">specifying a source location, see </span></span>
+<span class="line"><span style="color: #c9d1d9">https://go.microsoft.com/fwlink/?LinkId=243077. </span></span>
+<span class="line"><span style="color: #c9d1d9">Use /LimitAccess to prevent DISM from contacting WU/WSUS. </span></span>
+<span class="line"><span style="color: #c9d1d9"></span></span>
+<span class="line"><span style="color: #c9d1d9">    Example: </span></span>
+<span class="line"><span style="color: #c9d1d9">    DISM.exe /Online /Cleanup-Image /ScanHealth</span></span>
+<span class="line"><span style="color: #c9d1d9"></span></span>
+<span class="line"><span style="color: #c9d1d9">    DISM.exe /Image:c:\offline /Cleanup-Image /RestoreHealth </span></span>
+<span class="line"><span style="color: #c9d1d9">    /Source:c:\test\mount </span></span>
+<span class="line"><span style="color: #c9d1d9"></span></span>
+<span class="line"><span style="color: #c9d1d9">/Cleanup-Image /StartComponentCleanup [/ResetBase [/Defer]]</span></span>
+<span class="line"><span style="color: #c9d1d9">Use /StartComponentCleanup to clean up the superseded components and reduce</span></span>
+<span class="line"><span style="color: #c9d1d9">the size of the component store. Use /ResetBase to reset the base of </span></span>
+<span class="line"><span style="color: #c9d1d9">superseded components, which can further reduce the component store size.</span></span>
+<span class="line"><span style="color: #c9d1d9">Use /Defer with /ResetBase to defer long-running cleanup operations to the </span></span>
+<span class="line"><span style="color: #c9d1d9">next automatic maintenance. </span></span>
+<span class="line"><span style="color: #c9d1d9"></span></span>
+<span class="line"><span style="color: #c9d1d9">WARNING!  The installed Windows Updates cannot be uninstalled after the </span></span>
+<span class="line"><span style="color: #c9d1d9">/StartComponentCleanup with /ResetBase operation is completed. </span></span>
+<span class="line"><span style="color: #c9d1d9"></span></span>
+<span class="line"><span style="color: #c9d1d9">    Example: </span></span>
+<span class="line"><span style="color: #c9d1d9">    DISM.exe /Image:C:\test\offline /Cleanup-Image /StartComponentCleanup</span></span>
+<span class="line"><span style="color: #c9d1d9"></span></span>
+<span class="line"><span style="color: #c9d1d9">/Cleanup-Image /AnalyzeComponentStore </span></span>
+<span class="line"><span style="color: #c9d1d9">Use /AnalyzeComponentStore to create a report of the WinSxS component store.</span></span>
+<span class="line"><span style="color: #c9d1d9">For more information about the WinSxS report and how to use the information</span></span>
+<span class="line"><span style="color: #c9d1d9">provided in the report, see</span></span>
+<span class="line"><span style="color: #c9d1d9">https://go.microsoft.com/fwlink/?LinkId=293367. </span></span>
+<span class="line"><span style="color: #c9d1d9"></span></span>
+<span class="line"><span style="color: #c9d1d9">    Example: </span></span>
+<span class="line"><span style="color: #c9d1d9">    DISM.exe /Image:C:\test\offline /Cleanup-Image /AnalyzeComponentStore</span></span></code></pre>
+<p>But what does this mean?</p>
+<p>Well let’s take a look at one of the most used arguments. <code>DISM /Online /Cleanup-Image {/CheckHealth | /ScanHealth | /RestoreHealth} </code></p>
+<p>If you have had one of the many issues that exist with windows since 7 then there is a good chance you have seen this command. This uses the DISM tool on the “Online” windows image and the <code>Cleanup-Image</code> option. We then use the <code>/CheckHealth</code>, <code>/ScanHealth</code>, or <code>/RestoreHealth</code> servicing command to attempt to aqcuire information or attempt to fix the current windows image. <em><strong>This is a powerful tool.</strong></em></p>
+<h4 id="checkhealth">CheckHealth</h4>
+<blockquote>
+<p><code>DISM /Online /Cleanup-Image /CheckHealth</code></p>
+</blockquote>
+<p>This is used to check the DISM version, image version, and weather or not the component store is currupted or repairable. This is one of the quickest ways of seeing if something is wrong with your current system.</p>
+<h4 id="scanhealth">ScanHealth</h4>
+<blockquote>
+<p><code>DISM /Online /Cleanup-Image /ScanHealth</code></p>
+</blockquote>
+<p>This is probably one of the most comman fix suggestions on the internet. Anything wonky with windows and people will suggest this as a quick fix. Why is this? Well, it works a small percentage of the time.</p>
+<p>What this does is scans the currently running windows image and checks for any issues that it can resolve. It can fix these issues by pulling the missing or broken dependencies from Microsoft. This option means not having to pull out installation media to attempt a fix of windows, or having to reinstall in many cases.</p>
+<h4 id="restorehealth">RestoreHealth</h4>
+<blockquote>
+<p>`DISM /Online /Cleanup-Image /RestoreHealth</p>
+</blockquote>
+<p>This is the powerful tool we mentioned above. This allows us to restore the missing or currupt files from a trusted source. Using this command will pull the needed files from Microsoft to repair your running version of Windows. This isn’t a cure-all but it works for most system corruption issues.</p>
+			</article>
+		</main>
+		<footer class="astro-SZ7XMLTE">
+	&copy; 2023 Christopher Carlin. All rights reserved.
+</footer>
+	</body></html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" class="astro-BVZIHDZO">
+	<head>
+		<!-- Global Metadata --><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta name="generator" content="Astro v2.0.16">
+
+<!-- Primary Meta Tags -->
+<title>WSLg</title>
+<meta name="title" content="WSLg">
+<meta name="description" content="Windows Subsystems for Linux GUI">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://brunscii.github.io/astro-blog-site/blog/wsl/wslg/">
+<meta property="og:title" content="WSLg">
+<meta property="og:description" content="Windows Subsystems for Linux GUI">
+<meta property="og:image" content="https://brunscii.github.io/placeholder-social.jpg">
+
+		
+		
+	<link rel="stylesheet" href="/astro-blog-site/_astro/_...slug_.d7ec7cc9.css" />
+<link rel="stylesheet" href="/astro-blog-site/_astro/HeaderLink.astro_astro_type_style_index_0_lang.c3840210.css" />
+<link rel="stylesheet" href="/astro-blog-site/_astro/_...slug_.3f4867e1.css" /></head>
+
+	<body class="astro-BVZIHDZO">
+		<header class="astro-3EF6KSR2">
+	<h1 class="astro-3EF6KSR2">
+		Chris C&#39;s Blog
+	</h1>
+	<nav class="astro-3EF6KSR2">
+		<a href="{BASE}/" class="astro-3EF6KSR2 astro-EIMMU3LG">
+	Home
+</a>
+		<a href="{BASE}/blog" class="astro-3EF6KSR2 astro-EIMMU3LG">
+	Blog
+</a>
+		<a href="{BASE}/about" class="astro-3EF6KSR2 astro-EIMMU3LG">
+	About
+</a>
+		<a href="https://christopherjcarlin.com" class="astro-3EF6KSR2 astro-EIMMU3LG" target="_blank">
+	Portfolio
+</a>
+		<a href="https://github.com/brunscii" class="astro-3EF6KSR2 astro-EIMMU3LG" target="_blank">
+	GitHub
+</a>
+	</nav>
+</header>
+		<main class="astro-BVZIHDZO">
+			<article class="astro-BVZIHDZO">
+				
+				
+				<h1 class="title astro-BVZIHDZO">WSLg</h1>
+
+				
+				
+				<hr class="astro-BVZIHDZO">
+				<h1 id="what-is-wslg">What is WSLg</h1>
+<p>If you are unfamiliar with WSL then might I suggest that you start with my previous post <a href="../wsl">here</a></p>
+<p>WSL has changed a lot over it’s short life. When it first came out it only worked for <strong>CLI</strong>, or <strong>C</strong>ommand <strong>L</strong>ine <strong>I</strong>nterface, programs. Since then there have been advancements allowing graphical linux apps that use X11 or Wayland to run on windows. This is thanks to something called <a href="https://github.com/microsoft/wslg">WSLg</a>. <em>I remember when WSLg first came out you had to download it separate from WSL, now it is an included feature.</em></p>
+<p>If you have a WSL distro from before WSLg then you can update your distro. First thing is to switch to version 2 of WSL for the distro if you haven’t already.</p>
+<blockquote>
+<p><code>wsl --set-version &#x3C;distro> 2</code></p>
+</blockquote>
+<p>Next you update the distro using <code>wsl --update &#x3C;distro></code></p>
+<h1 id="installing-wslg-apps">Installing WSLg apps</h1>
+<p>Now it’s as simple as installing X11 or Wayland apps on your WSL distro. The people at microsoft have worked hard to make WSLg a built in part of WSL.</p>
+<h2 id="examples">Examples</h2>
+<h3 id="x11-apps">x11-apps</h3>
+<p>We can install the x11 apps fron the terminal like so:</p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #c9d1d9">sudp apt install x11-apps</span></span></code></pre>
+<p>Whats in the x11-apps package? Well, let’s take a look.</p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #c9d1d9">dpkg -L x11-apps</span></span></code></pre>
+<p>gives us the following</p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #c9d1d9">...</span></span>
+<span class="line"><span style="color: #c9d1d9">/usr/bin/atobm</span></span>
+<span class="line"><span style="color: #c9d1d9">/usr/bin/bitmap</span></span>
+<span class="line"><span style="color: #c9d1d9">/usr/bin/bmtoa</span></span>
+<span class="line"><span style="color: #c9d1d9">/usr/bin/ico</span></span>
+<span class="line"><span style="color: #c9d1d9">/usr/bin/oclock</span></span>
+<span class="line"><span style="color: #c9d1d9">/usr/bin/rendercheck</span></span>
+<span class="line"><span style="color: #c9d1d9">/usr/bin/transset</span></span>
+<span class="line"><span style="color: #c9d1d9">/usr/bin/x11perf</span></span>
+<span class="line"><span style="color: #c9d1d9">/usr/bin/x11perfcomp</span></span>
+<span class="line"><span style="color: #c9d1d9">/usr/bin/xbiff</span></span>
+<span class="line"><span style="color: #c9d1d9">/usr/bin/xcalc</span></span>
+<span class="line"><span style="color: #c9d1d9">/usr/bin/xclipboard</span></span>
+<span class="line"><span style="color: #c9d1d9">/usr/bin/xclock</span></span>
+<span class="line"><span style="color: #c9d1d9">/usr/bin/xconsole</span></span>
+<span class="line"><span style="color: #c9d1d9">/usr/bin/xcursorgen</span></span>
+<span class="line"><span style="color: #c9d1d9">/usr/bin/xcutsel</span></span>
+<span class="line"><span style="color: #c9d1d9">/usr/bin/xditview</span></span>
+<span class="line"><span style="color: #c9d1d9">/usr/bin/xedit</span></span>
+<span class="line"><span style="color: #c9d1d9">/usr/bin/xeyes</span></span>
+<span class="line"><span style="color: #c9d1d9">/usr/bin/xgc</span></span>
+<span class="line"><span style="color: #c9d1d9">/usr/bin/xload</span></span>
+<span class="line"><span style="color: #c9d1d9">/usr/bin/xlogo</span></span>
+<span class="line"><span style="color: #c9d1d9">/usr/bin/xmag</span></span>
+<span class="line"><span style="color: #c9d1d9">/usr/bin/xman</span></span>
+<span class="line"><span style="color: #c9d1d9">/usr/bin/xmore</span></span>
+<span class="line"><span style="color: #c9d1d9">/usr/bin/xwd</span></span>
+<span class="line"><span style="color: #c9d1d9">/usr/bin/xwud</span></span>
+<span class="line"><span style="color: #c9d1d9">...</span></span></code></pre>
+<blockquote>
+<p>Speculatory side note:</p>
+<p><em>So we can run xcalc on windows. Why, you might ask. It’s not about running an uglier calculator on windows. This represents a proof of concept that demonstrates linux applicaitons running in windows. This is something I have wanted since I learned linux in 2008. Yes you could run a VM, but that’s extra overhead on your computer. Being able to run linux and now android apps in windows means a unified space for developers. We have seen how certain game console failed because they were challenging to develop for. This added feature means an evnironment that can be used to develop for other environments. We have seen a massive shift in developers moving to linux thanks to it’s build in tools, ease of use for networking and many other features, a powerful command line, and it being open. If windows can become a decent development environment then maybe they’ll win back the devs. VS Code was a good start.</em></p>
+</blockquote>
+<p>Let’s try something more useful than these basic utility apps shall we.</p>
+<h3 id="firefox">Firefox</h3>
+<p>Everyone that’s familiar with computers should be familiar with firefox. Mozilla, the company behind firefox, offers one of the best resources for web developers, the MDN. The Mozilla Developer Network is a free set of documentation for javascript, HTML, CSS, web API’s and more.</p>
+<p>Firefox itself may have seen better days usage-wise, but it is still a very capable browser and is often times the default for many linux distos.</p>
+<p>Maybe you are tired of all of your browsers having 20-50 tabs open, or maybe you like a little extra privacy. Whatever the case we can install and run firefox through WSLg quickly and easily.</p>
+<p>On Debian systems</p>
+<blockquote>
+<p><code>sudo apt install firefox-esr -y</code></p>
+</blockquote>
+<p>So it’s installed on our Debian WSL, now what?</p>
+<p>Simple, just run it. You should get something like this.</p>
+<p><img src="/blogContent/wsl/firefox-esr-debian-wsl.png" alt="firefox"></p>
+<p>Sure the windows theme is lost a bit with wslg, but it is a running version of a debian build of firefox on windows. That in itself, is impressive.</p>
+<p><em>I remeber learning about VM’s and thinking it was the coolest thing 15 years ago. This would have blown my mind back then</em></p>
+			</article>
+		</main>
+		<footer class="astro-SZ7XMLTE">
+	&copy; 2023 Christopher Carlin. All rights reserved.
+</footer>
+	</body></html>
