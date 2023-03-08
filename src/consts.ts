@@ -3,3 +3,4 @@
 
 export const SITE_TITLE = 'Chris C\'s Blog';
 export const SITE_DESCRIPTION = 'Christopher Carlin\'s Blog Stite';
+export const BASE = '/astro-blog-site';

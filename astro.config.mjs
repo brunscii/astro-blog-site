@@ -6,7 +6,8 @@ import sitemap from '@astrojs/sitemap';
 // https://astro.build/config
 export default defineConfig(
 	{
-		// site: 'https://example.com',
+		site: 'https://brunscii.github.io',
+		base: '/astro-blog-site',
 		integrations: [mdx(), sitemap()],
 		markdown : {
 			syntaxHighlight: 'shiki'
