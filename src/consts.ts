@@ -3,4 +3,4 @@
 
 export const SITE_TITLE = 'Chris C\'s Blog';
 export const SITE_DESCRIPTION = 'Christopher Carlin\'s Blog Stite';
-export const BASE = '/astro-blog-site';
+export const BASE = import.meta.env.BASE_URL;
