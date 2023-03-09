@@ -87,7 +87,7 @@ So it's installed on our Debian WSL, now what?
 
 Simple, just run it. You should get something like this.
 
-![firefox](/astro-blog-site/assets/blogContent/wsl/firefox-esr-debian-wsl.png)
+![firefox](/astro-blog-site/blogContent/wsl/firefox-esr-debian-wsl.png)
 
 
 Sure the windows theme is lost a bit with wslg, but it is a running version of a debian build of firefox on windows. That in itself, is impressive. 
