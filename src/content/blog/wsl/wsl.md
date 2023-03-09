@@ -203,7 +203,7 @@ According to the wsl program:
 
 ### Using the Microsoft Store
 
-![Microsoft Store Showing WSL App](/astro-blog-site/public/blogContent/wsl/MSStoreWSL.png)
+![Microsoft Store Showing WSL App](/public/blogContent/wsl/MSStoreWSL.png)
 
 The first step is to make sure that you have WSL installed on your computer.
 
@@ -213,7 +213,7 @@ Some of the most common are Ubuntu, Debian, Suse, and Kali.
 
 If you're looking for the easiest way to get started with WSL then you can't get easier than installing 2 apps from the MS Store.
 
-![Ubuntu from the MS Store](/astro-blog-site/public/blogContent/wsl/MSStoreWSLUbuntu.png)
+![Ubuntu from the MS Store](/public/blogContent/wsl/MSStoreWSLUbuntu.png)
 
 So what do we get with this installation?
 
@@ -263,7 +263,7 @@ This will set the default version of wsl to 2.
 
 #### Step 6 Install Linux Distro from MS Store
 
-![MS Store](/astro-blog-site/public/blogContent/wsl/MSStoreWSL.png)
+![MS Store](/public/blogContent/wsl/MSStoreWSL.png)
 
 Open the MS Store and install a Linux distro.
 
