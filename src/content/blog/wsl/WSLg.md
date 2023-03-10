@@ -87,13 +87,43 @@ So it's installed on our Debian WSL, now what?
 
 Simple, just run it. You should get something like this.
 
-![firefox](/docs/assets/blogContent/wsl/firefox-esr-debian-wsl.png)
-![firefox](/blogContent/wsl/firefox-esr-debian-wsl.png)
+![firefox](/public/blogContent/wsl/firefox-esr-debian-wsl.png)
 
 
 Sure the windows theme is lost a bit with wslg, but it is a running version of a debian build of firefox on windows. That in itself, is impressive. 
 
-*I remeber learning about VM's and thinking it was the coolest thing 15 years ago. This would have blown my mind back then*
+*I remeber learning about VM's and thinking it was the coolest thing 15+ years ago. This would have blown my mind back then*
+
+So why run a linux version of Wirefox on Windows? Testing. 
+It's good to be able to test your web apps on multiple platforms. 
+I'm sure there are other reasons, such as security, but that's a different aricle right there. 
+
+## Real uses
+
+To be honest I haven't really felt the need to use WSLg, at least not for more than playing around. 
+While it is amazing technology, and I'm happy to see it around, I can just VNC into a VM on my Linux server.
+I'm sure not everyone has a server running on their network so WSLg makes sense for the layman, right? 
+Sure, that's one way of looking at it. 
+If I'm on the go and only have my laptop, or am at a workstation somewhere else, then I have the ability to run Linux native GUI apps in Windows without spinning up a VM.
+
+It is a matter of preference whether you would run a WSLg app or just run Windows in a VM. 
+In my personal experience the latter is the better opeion for power efficiency, security, and speed.
+I even have an image of Windows 7 that I run on my server every once in a while that use to run baremetal on that server. 
+The boot time, load speeds, and overall telemetry efficiency is greatly improved from running in the VM.
+When it ran baremetal it could take up to 5 minutes to boot, would hand on tasks, and felt much older than it was.
+In the VM however, it boots in 20 or so seconds and is a smooth operator.
+This is using an image of the disk that had previously been the boot drive, and is stored on a slower HDD.
+
+On Windows WSLg github [page](https://github.com/microsoft/wslg) they show the Linux versions of Visual Studio Code, Chrome, xClock, and xCalc. Is this useful? No, not really. All of these have Windows versions that will probably run better in Windows tham the WSLg versions.
+
+The practicallity of WSLg is being able to run Linux GUIs on windows without having to
+- Set up a VM
+- VNC into an existing system
+- Run Windows in a VM in Linux and just use the native apps
+- Dual Boot
+- Install a Windows version of the same app
+
+Overall this is a big win for Windows users and Linux users alike as we are bringing Linux into the foreground on Windows. 
 
 
 
