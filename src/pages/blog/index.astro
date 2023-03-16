@@ -37,7 +37,8 @@ const posts = (await getCollection('blog')).sort(
 				/* color: #8e32dc; */
 			}
 			ul p {
-				text-indent: 3em;
+				/* text-indent: 3em; */
+				margin-left: 3em;
 				font-size: .8em;
 			}
 		</style>
@@ -51,8 +52,8 @@ const posts = (await getCollection('blog')).sort(
 					{
 						posts.map((post) => (
 
-						//only show the link if the post is a final draft
-							// post.data.draft && (post.data.draft.toLowerCase() == 'final') ?
+						// only show the link if the post is a final draft
+							!post.data.draft && 
 							
 							<li>
 								{post.data.pubDate ? <FormattedDate date={post.data.pubDate} />

@@ -18,17 +18,17 @@ import { SITE_TITLE, BASE } from '../consts';
 <style>
 	header {
 
-        display: grid;
-        width: 100%;
+		display: grid;
+		width: 100%;
 
-        justify-content: center;
-        margin: 0;
-        padding: 0;
-
-        backdrop-filter: blur(5px) hue-rotate(10deg);
-        -webkit-backdrop-filter: blur(5px) hue-rotate(10deg);
-				
-        position: fixed;
+		justify-content: center;
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		backdrop-filter: blur(5px) hue-rotate(10deg) grayscale(.45);
+		-webkit-backdrop-filter: blur(5px) hue-rotate(10deg) grayscale(.45);
+		
+		position: fixed;
 
 	}
 	h1 {
@@ -43,8 +43,16 @@ import { SITE_TITLE, BASE } from '../consts';
         margin-bottom: .2em;
     }
 
+		nav a{
+			padding-inline: 1em;
+		}
+
     nav a:hover {
-        background-color: #50105d;
+        /* background-color: #50105d; */
+				/* opacity:.3; */
+				border-radius: 2px;
+				background: linear-gradient( 45deg, rgba(255, 0, 0, 0.192), rgba(0, 0, 255, 0.329)),
+										linear-gradient( -45deg, rgba(255, 0, 0, 0.192), rgba(0, 0, 255, 0.329));
     }
 
 </style>
