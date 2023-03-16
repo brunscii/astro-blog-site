@@ -5,7 +5,7 @@
 	--background-quote-color: #0d1117;
 	--text-header-color: #222;
 	--text-color: #333;
-	
+	--link-color: #00ffffaf;
 	--document-pading: 1rem;
 }
 
@@ -71,7 +71,7 @@ header > nav {
 }
 
 a {
-	color: #00ffffaf;
+	color: var(--link-color);
 	/* color: #3273dc; */
 }
 

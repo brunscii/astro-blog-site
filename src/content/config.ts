@@ -18,7 +18,7 @@ const blog = defineCollection({
 			.optional()
 			.transform((str) => (str ? new Date(str) : undefined)),
 		// This is whether or not a post is a draft
-        draft: z
+    draft: z
 			.boolean()
 			.optional(),
 		heroImage: z.string().optional(),

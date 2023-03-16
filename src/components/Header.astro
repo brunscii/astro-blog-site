@@ -19,26 +19,24 @@ import { SITE_TITLE, BASE } from '../consts';
 	header {
 
         display: grid;
-        max-width: 100%;
+        width: 100%;
 
         justify-content: center;
         margin: 0;
         padding: 0;
 
-        /* background-color: #00ffff0f; */
-
-        backdrop-filter: blur(5px);
-        -webkit-backdrop-filter: blur(5px);
-
+        backdrop-filter: blur(5px) hue-rotate(10deg);
+        -webkit-backdrop-filter: blur(5px) hue-rotate(10deg);
+				
         position: fixed;
 
 	}
 	h1 {
 		/* font-size: 2.75rem; */
 		margin: 0;
-		color: #94a;
+		color: var(--link-color);
 		/* width: fit-content; */
-		text-shadow: .1em .1em 0.12em #00ffffaf;
+		/* text-shadow: .1em .1em 0.12em #00ffffaf; */
 	}
 
     nav {
@@ -46,7 +44,7 @@ import { SITE_TITLE, BASE } from '../consts';
     }
 
     nav a:hover {
-        background-color: #94a;
+        background-color: #50105d;
     }
 
 </style>

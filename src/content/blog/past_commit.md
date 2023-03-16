@@ -3,8 +3,8 @@ title: "How to commit the past"
 description: "How to make commits for different dates in the command line. Make yesterdays commit today."
 pubDate: "Mar, 7, 2023"
 draft: true
+heroImage: "/public/blogContent/gitPic/gitTime.svg"
 ---
-
 ## Why commit to the past?
 
 There have been times where I have fallen asleep at the desk, or with a laptop on my chest. 
