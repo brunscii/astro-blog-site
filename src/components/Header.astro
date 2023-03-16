@@ -25,8 +25,10 @@ import { SITE_TITLE, BASE } from '../consts';
 		margin: 0;
 		padding: 0;
 		box-sizing: border-box;
-		backdrop-filter: blur(5px) hue-rotate(10deg) grayscale(.45);
-		-webkit-backdrop-filter: blur(5px) hue-rotate(10deg) grayscale(.45);
+		background-color: rgba(0, 0, 0, 0.432);
+		border-radius: 0px 0 10px 10px;
+		backdrop-filter: blur(5px) grayscale(.45);
+		-webkit-backdrop-filter: blur(5px) grayscale(.45);
 		
 		position: fixed;
 
@@ -35,12 +37,15 @@ import { SITE_TITLE, BASE } from '../consts';
 		/* font-size: 2.75rem; */
 		margin: 0;
 		color: var(--link-color);
+		text-align: center;
+		
 		/* width: fit-content; */
 		/* text-shadow: .1em .1em 0.12em #00ffffaf; */
 	}
 
     nav {
-        margin-bottom: .2em;
+        /* margin-bottom: .2em; */
+				/* overflow: hidden; */
     }
 
 		nav a{
