@@ -13,9 +13,11 @@ Table of Contents:
 
 ## What's the point?
 
-For millions of Americans working retail is a reality that they can't escape. Over the last decade I have worked in retail, from stocker to management, and have met people from just about every background. From business owners to former IT workers, people from all walks of life flock to retail positions. The real question is why, what are the benefits, downfalls, and is it for you.
+For millions of Americans working retail is a reality that they can't escape. Over the last decade I have worked in retail, from stocker to management, and have met people from just about every walk of life. From business owners to former IT workers, people from different backgrounds flock to retail positions. The real question is why, what are the benefits, downfalls, and is it for you?
 
-I just want to start by saying that retail workers are an essential part of our economy. Without people to stock shelves, run registers, clean, and everything in between; then there would be no commerce. That being said the retail worker is considered one of the lowest forms of employee. Why is this? Is it the barrier to entry for these positions? Is it the abundance of people that will work the position? Is it the lack of skill required for the position? Perhaps it is a mix of these things that keeps the retail worker in the shadows.
+I just want to start by saying that retail workers are an essential part of our economy. Without people to stock shelves, run registers, clean, and everything in between, there would be no commerce. That being said the retail worker is considered one of the lowest forms of employee. Why is this? Is it the barrier to entry for these positions? Is it the abundance of people that will work the position? Is it the lack of skill required for the position? Perhaps it is a mix of these things that keeps the retail worker in the shadows.
+
+The point of this post is to explain the pros, cons, and some examples of retail work. This isn't designed to sway your opinion for or against retail postitions, but instead to share some experiences. The astute of you will probably be able to determine my views on the subject, but that is niether here nor there. This is just a way of sharing some of my personal experience from over 10 years of retail work.
 
 ### Barrier to entry
 
@@ -66,7 +68,7 @@ Self-actualization is the capstone of the hierarchical pyramid. The desire to be
 
 
 
-## Anecdotal evidence
+## Anecdotal Evidence
 
 This is the part in which I share some of my personal experiences within my retail career. I share interactions, communications, and how they made me feel. This is not meant to discourage anyone from working retail but instead to shine a light on how they worker's are treated. I will share both positive and negative interactions with customers, management, and associates.
 
@@ -98,4 +100,15 @@ One set of cousines managed to steal thousands in electronics by sneaking it thr
 
 Wherever there is commerce there is sure to be bad actors. 
 
- 
+### Lack of work ethics
+
+In any position you will have people that do more and less than the average worker. This is just a fact of life. Not everyone performs at the same rate, yet they can get paid at the same rate. One of the most infuriating things is working hard to get something done just to be rewarded with more work than your co-workers. When you spend an entire day sweating just to see someone that makes more than you walk around and chat all day, it's beyond annoying. Every store will have your typical talker's that wonder around and BS all day. It's just a fact of retail. 
+
+I once worked in a store that had a manager that would sleep while working overnight. He was an obese man that would exaggerate any achievement he had overnight while always talking down any other manager. He would act as if he could run any part of the store better than anyone else. My first night overnight, covering his vacation, I was told I did better than he ever did. When they told me I had to go overnight I was in a panic. I was affraid of failing. What I did was ask the people I knew did overnight well how they did it. I would also talk to all of the workers and see what they needed to get the job done. I prioritized what I knew the store manager looked for, since I toured with him many mornings, and I made sure the store was clean when I was walked off. Little did I know I would be walked off by the meanest and most senor ASM we had. Even though we were the same position her word was gold to the store manager. 
+
+She walked up and down most of the aisles in grocery, searching for any mistakes. Chekced the backroom looking for unworked freight and any messes. She couldn't find a thing. For the first time she actually gave me a compliment and said good job. When she told me that I did better than she ever saw the other guy do I was escstatic. But at the same time, the other manager that sucked and talked himself up made more than me. I had been screwed on my yearly raise by lying managers that were like a bunch of snakes, slowly strangling the life out of me. Now don't get me wrong, I got along with most of the team. That's why it hurt more when they stabbed me in the back by going out of their way to make me look bad while they themselves were horrible at their jobs. When the store manager doesn't leave the office and instead listens to a couple of snakes instead of the associates, you tend to get screwed. 
+
+After proving my worth at that store I would often get punished with special assignments. As well as having to manage the backroom, grocery and consumables, I would also have to set up the store map and locations, plan and execute black fiday "event" day, and also close most of the time by myself.
+
+### Rude customers
+
