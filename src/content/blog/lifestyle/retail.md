@@ -4,6 +4,13 @@ description: "What it's like to work retail while being technically inclined."
 draft: true
 ---
 
+Table of Contents:
+- [What's the point](#whats-the-point)
+- [Barrier to Entry](#barrier-to-entry)
+- [Abundance of options](#abundance-of-options)
+- [Escape](#trying-to-escape-the-world-of-retail)
+- [Exisitnetial dread](#existential-dread)
+
 ## What's the point?
 
 For millions of Americans working retail is a reality that they can't escape. Over the last decade I have worked in retail, from stocker to management, and have met people from just about every background. From business owners to former IT workers, people from all walks of life flock to retail positions. The real question is why, what are the benefits, downfalls, and is it for you.
@@ -27,7 +34,7 @@ Yes there may have been a shallower applicant pool during the pandemic, but gene
 
 ### Benefits
 
-There are a few benefits to working in retail, emphasis on few. There is the low barrier to entry and the plethora of jobs. The fact that you don't need to have a formal education or a certain amount of experience means that just about anyone cane get a job. See the earlier section for the pitfalls. The abundance of jobs means that you can grab a job and work while getting into the field of your choice. Sometimes, at higher levels, the money is actually decent. For example, a Walmart store manager can start at $125,000 with the potential of a bonus that is 125% of that. I have personally seen store managers make $90,000 bonuses. That being said, you can also expect to spend the majority of your time and energy on the store.
+There are a few benefits to working in retail. There is the low barrier to entry and the plethora of jobs. The fact that you don't need to have a formal education or a certain amount of experience means that just about anyone cane get a job. See the earlier section for the pitfalls. The abundance of jobs means that you can grab a job and work while getting into the field of your choice. Sometimes, at higher levels, the money is actually decent. For example, a Walmart store manager can start at $125,000 with the potential of a bonus that is 125% of that. I have personally seen store managers make $90,000 bonuses. That being said, you can also expect to spend the majority of your time and energy on the store.
 
 One of the other main benefits is that you can learn on the job. Learning how to merchandise, increase sales, and properly service customers are skills that will carry over to any other field. Some places even have academies to send their management teams. While these skills might not be the best on a resume, they can carry over from company to company. Inventory control is essential to managing inventory flow, merchandising teaches visual styling, and customer service is a universal skill when in a front facing environment.
 
@@ -41,7 +48,7 @@ So what is the solution? Keep working on you skills in the field that you want t
 
  The trick is persistence and pushing yourself out of your comfort zone. There is an old saying about growth only happens outside of your comfort zone. When we push ourselves to do something that makes us feel uncomfortable then we begin to understand our selves. When I first became a manager I wasn't sure of how to tell people what to do and was afraid of what people thought of me. The truth is that you always want people to like you, you just learn to be comfortable with telling people they are wrong. When you force yourself to confront an individual and solve a problem then you learn to better communicate your needs as well as that of the company. This mindset is something that is learned through experience. Some of the meanest managers I knew started out as push overs. Pushing yourself to grow in new ways is how you escape the retail hell by learning how to assimilate into a world outside of selling and stocking.
  
-### Existential Dread
+### Existential Dread 
 
 If you look, you will find an abundance of escapism in the realm of retail workers. There is no shortage of existential dread for those in a dead end job. The question then becomes, does the job create the dread or are people that are lost and broken drawn to retail through a lack of ambition? The reality is a mix of both. Those that are lost or broken need to survive, the basis for which in our society is through monetary gains. The simplest for of which is through trading our time and energy for the ability to feed and shelter ourselves. The life that is then created is one of need. 
 
@@ -57,6 +64,38 @@ In my tenure working retail I have amassed many horror stories of rude, angry, a
 
 Self-actualization is the capstone of the hierarchical pyramid. The desire to become a better person is often something with unfulfilled needs cannot achieve. This is the killer part of the existential dread. The fact is that you will not feel fulfilled unless you come to terms with your life and accept it as is. having your needs met is a great way to do this but working retail makes that in and of itself a challenge. It takes great mental prowess to overcome the other needs and feel like you are enough. Enough for your own life, enough for others to love, enough for anything. The sad truth is that most will never realize self actualization and in term spend their reality in a sense of unmotivated insufficiency. Others may spend their lives in a sense of delirium, choosing to ignore the fact that they are living paycheck to paycheck and ignoring other needs completely in the pursuit of happiness.
 
+
+
 ## Anecdotal evidence
 
 This is the part in which I share some of my personal experiences within my retail career. I share interactions, communications, and how they made me feel. This is not meant to discourage anyone from working retail but instead to shine a light on how they worker's are treated. I will share both positive and negative interactions with customers, management, and associates.
+
+### Fights Overnight
+
+The first week overnight in one of the Wilmington stores I saw 3 homeless fights, a drug overdose, and an employee fight nearly happen. Having worked overnight before in previous stores I wasn't worried until I noticed how "ghetto" the store I was working in was. The first day there I parked next to a car with a person hanging out the driver's door. I addumed they were passed out asleep. When I went on lunch I noticed an ambulance taking them away. I felt responsible for a while until I realized that I didn't even consider they had OD'd. They had seemed unconscious but I have seen countless people sleep on the streets like that downtown. To me, they seemed asleep, passed out as if one had cunsumed too much the night before. I saw no syringe, or signs of drugs from what I saw but I felt bad none the less. 
+
+The first night there I saw a couple of homeless people fighting over beer thay they were drinking by the bathrooms. I had heard the manager that was showing me around start yelling while I was in the back and quickly ran to where he was. It turns out that there was two men arguing about something silly and throwing cans of beer as well as fists. As I arrived the other manager had broken them up long enough for the one homeless man to say "he started it!" I said something along the lines of "I don't care who started it! You can't drink in the store, and you're making a mess and you have to leave." The one said "I bought this beer and I have a reciept." In hindsight he probably just found a receipt int he parking lot and grabbed the same beer. I said something like "I don't care, you've already destroyed half of it, just get out of here." 
+
+I proceeded to see homeless fights, shoplifters, and recieved the occaisional death threat until something crazy happened. A little something called covid 19. They told me that they were going to shut down parts of the store and I thought they were crazy. They told me to wear a mask and contiue working like normal. Do the same amount of work while also doing temperature checks and shutting down the store. The upside to closing is that there were no homeless fights, no strippers coming in for the workers to get distracted by, and no one to mess up the store while we recovered from the mess we were left from the day crew. 
+
+### Truck Loads of Fun
+
+When I was at UNCW I worked unloading trucks at Walmart. I have personally seen quite a few people get hurt while unloading trucks. I saw one person get hit in the head with a cast iron candle that someeone thought would be goot to put at the top of a rather unstable and large stack of boxes. As soon as he touched the one the candle came down from nearly 10 feet in the air and smacked him right in the side of the head. He immediately clutched his head and ran writhed in pain. Luckily it hit someone with a rather thick skull and he was alright but the way these trucks are loaded is not only dangerous, but idiotic at times. 
+
+One fun time I saw a pallet of water sitting on top of a pallet of TV's. I've seen crushed produce, whole pallets of dairy turned over and countless crushed boxes from carelessness in the wharehouse or through transit. Th half wrapped pallets and unsecured loads make tricky unloads. The already turned over egg and dairy pallets make for a slippery mess while also burning extra time cleaning up the mess, unloading, and through claiming out the damages. 
+
+There was one point, during the summer, where the trucks were so hot that even the candles would melt. I stuck my head in a melted candle once. If you have never experienced this kind of heat, then it is quite exhousting to work in, especially while constantly lifting upwards of 50 lbs.
+
+At one point the unloader's job was to unload the GM truck, sort breakpacks ( mixed up boxes of freight ), unload and sort the grocery truck, and to pull everything out to the sales floor. There was a time in which I was the only person that showed up to work on 2nd shift IMS (The unload crew). As the only person it is impossible to unload 2000 pieces by yourself and do everything else in a day. With a team of sales associates I unloaded the truck, pulled and sorted the grocery truck by aisle, and sorted the breakpacks. All with time to spare. This was a feat that my older self probably couldn't, or at least wouldn't do. I then proceeded to deop a pallet on my foot while cleaning up and smash the end of my toe. With a bloody foot, I hobbled into the AD office and asked for a band aid. The Manager on duty looked at me and said "ew gross. Don't get blood everywhere." There was no "great job getting everything sorted" and no "Oh meh god, are you alright?!?!" Instead I was just told I could leave early. Basically I had woked myself to death just to loose out on money from leaving early. What a deal. I wasn't told to fill out an incident report and I was just told to not bleed everywhere. He had even asked me if I could pull everything out to the floor with a bloody foot. This was the thanks for overachievement. 
+
+### Thieving Coworkers
+
+I worked with a guy that would buy a drink at the register in electronics and say he already got the rest of the snacks he had, just to steal them and eat what wasn't his. 
+
+I worked with a guy that would drink chocolate milk inside the dairy cooler and then place the empty cartons in the claims area. When management found out she had told him just don't do it anymore. He told her his family was hungry and that they weren't eating properly. This was a lie since he lived with his girlfriend's parents, who made sure their daughter and her baby were fed. This guy was also quite large for someone that would have been starving, and also brought a lunch every day. He then proceeded to steal steaks, yogurt, and drinks just for the sake of doing so. This went on until he finally quit to move to another state. 
+
+One set of cousines managed to steal thousands in electronics by sneaking it through the edge of the truck. They would go around and scoop up the dropped iPhones and iPads. They would talk about needing a new laptop and joke while dropping it through the hole. This went on for a while with the store knowing. All high ticket items are checked for on the trucks now to prevent this from happeneing. 
+
+Wherever there is commerce there is sure to be bad actors. 
+
+ 
