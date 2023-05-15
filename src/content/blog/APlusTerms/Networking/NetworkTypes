@@ -1,0 +1,24 @@
+---
+title: "Network Types"
+description: "A brief overview of the network types that appear on the A+ certification exam"
+author: "Chris Carlin"
+draft: true
+---
+
+## Network Types
+
+There are many ways to connect devices to one another. Whether you are connecting IOT, computers, wireless devices, or anything in between; there is a network type that is ideal for each occation.
+
+The main network types are:
+1) Persona Area Network (PAN)
+2) Local Area Network (LAN)
+3) Metropolatan Area Network (MAN)
+4) Wide Area Network (WAN)
+
+Among there there are sub categories and specialty networks such as Storage Area Network (SAN) and Wireless Local Area Network (WLAN).
+
+## Personal Area Network (PAN)
+ 
+This is a form of network that is between a small number of devices and has limited range. Think of bluetooth from you phone to your speaker, your controller to your game console, your remote to your TV, your watch to your phone, your mouse to your computer and so on and so forth. When there is a connection between peripherals or smaller devices there is usually a PAN.
+
+## Local Area Network (LAN)
