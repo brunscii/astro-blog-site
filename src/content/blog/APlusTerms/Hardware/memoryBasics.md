@@ -19,8 +19,9 @@ So what are the different types of DDR memory?
 
 | RAM Type | Speed | Pins | bandwidth |
 | ---      | ---   | ---  | ---       |
-| DDR1     |  | | |
-| DDR2     |  | | |
-| DDR3     |  | | |
-| DDR4     |  | | |
-| DDR5     |  | | |
+| SDRAM    |  | 168| |
+| DDR1     |  | 184| |
+| DDR2     |  | 240 | |
+| DDR3     |  | 240 | |
+| DDR4     |  | 288 | |
+| DDR5     |  | 288 | |
