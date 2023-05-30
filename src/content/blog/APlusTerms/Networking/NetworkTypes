@@ -17,18 +17,18 @@ The main network types are:
 
 Among there there are sub categories and specialty networks such as Storage Area Network (SAN) and Wireless Local Area Network (WLAN).
 
-## Personal Area Network (PAN)
+### Personal Area Network (PAN)
  
 This is a form of network that is between a small number of devices and has limited range. Think of bluetooth from you phone to your speaker, your controller to your game console, your remote to your TV, your watch to your phone, your mouse to your computer and so on and so forth. When there is a connection between peripherals or smaller devices there is usually a PAN.
 
-## Local Area Network (LAN)
+### Local Area Network (LAN)
 
 This is one of the most common forms of networks. It describes a network that is confined to an area such as a builing or house. This network is used to connect devices through the use of switches, which are devices that send data to specific devices. A LAN can be used to connect multiple devices to one internet connection like in a home network. Think about how your phone, computer, and game console can all connect to the internet at the same time. This is thanks to the switch and the router. The switch handles the traffic and the router connects the switch to the internet. Routers can also be used to connect multiple switches together in order to form a network of smaller networks.
 
-## Metropolitan Area Network (MAN)
+### Metropolitan Area Network (MAN)
 
 This is not a gender based network. This is a network that connects smaller networks around a city. Think about a college campus. With every building having it's own LAN network, you can connect them all together to make a MAN. Sometimes the campus MAN is called a campus network. MAN's are often between 3 and 30 miles. Some companies and government buildings might use a MAN to communicate between different buildings located at a distance. 
 
-## Wide Area Network (WAN)
+### Wide Area Network (WAN)
 
 A WAN is a network that stretches over a large distance. Imagine a single school that uses a LAN network. It can be connected to the other schools in the region using a WAN network, either directly or through the internet. Since each school is far apart they will often just group the LAN networks of each school in a way that is comprehensive for the system administrator. The system administrator will often be in charge or maintaining the WAN all the way down to the individual LAN and individual devices. This connectivity is ideal for the larger networks separated by a large distance.
