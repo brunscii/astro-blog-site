@@ -2,7 +2,8 @@
 title: "Network Types"
 description: "A brief overview of the network types that appear on the A+ certification exam"
 author: "Chris Carlin"
-draft: true
+draft: false
+heroImage: "/public/blogContent/network.jpg"
 ---
 
 ## Network Types
@@ -32,3 +33,17 @@ This is not a gender based network. This is a network that connects smaller netw
 ### Wide Area Network (WAN)
 
 A WAN is a network that stretches over a large distance. Imagine a single school that uses a LAN network. It can be connected to the other schools in the region using a WAN network, either directly or through the internet. Since each school is far apart they will often just group the LAN networks of each school in a way that is comprehensive for the system administrator. The system administrator will often be in charge or maintaining the WAN all the way down to the individual LAN and individual devices. This connectivity is ideal for the larger networks separated by a large distance.
+
+## Examples
+
+So what would you call the internet? 
+- The internet is a WAN as it covers large distances and many networks.
+
+What is my companies network?
+- Most likily it uses a LAN of some sort. 
+- Most companies have WLANs setup. Sometimes you may have a few buildings networked together in a MAN, but this is not a common occurance unless you have multiple buildings in a city on the same network pysically connected. Most of the time you will have a LAN network setup for the emplyees and a VPN for remote workers to connect to the LAN. 
+
+What network does my smart watch use? 
+- There is usually a PAN connection to your phone. 
+- Many can also use the Wi-Fi to connect to the LAN.
+
