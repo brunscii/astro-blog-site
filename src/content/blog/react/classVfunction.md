@@ -1,7 +1,9 @@
 ---
-title:  'React Component Class vs Function'
+title:  'React Components: Class vs Function'
 description: 'This is a comparison of using React component classes vs Function components'
 ---
+
+
 If you started using React a while ago then you probably learned how to make components using classes. The new trend seems to be to use functions. 
 
 Which is better and which is right?
