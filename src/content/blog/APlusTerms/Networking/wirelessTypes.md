@@ -2,7 +2,8 @@
 title: "Wireless Types"
 description: "The different types of wireless networks and standards for Wi-Fi"
 author: "Chris Carlin"
-draft: true
+heroImage: "/public/blogContent/wifi-svgrepo-com.svg"
+draft: false
 ---
 
 ## Wifi Types
