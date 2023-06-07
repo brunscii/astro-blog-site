@@ -11,10 +11,27 @@ RAID, or Redundant Array of Independent Disks, is a way for configuring your sto
 
 ## Types of RAID
 
-| RAID Type | Speed | redundancy | number of drives |
-| --- | --- | --- | --- | 
-| RAID 0 | 0 | 0 | 0 |
-| RAID 1 | 0 | 0 | 0 |
-| RAID 5 | 0 | 0 | 0 |
-| RAID 6 | 0 | 0 | 0 |
-| RAID 10 | 0 | 0 | 0 |
+| Name    | RAID Type                  | Max Drive Failure | Min number of drives |
+| ---     | ---                        |  ---              | ---                  | 
+| RAID 0  | Striping                   | 0                 | 2                    |
+| RAID 1  | Mirroring                  | n-1               | 2                    | 
+| RAID 5  | Striping and Parity        | 1                 | 3                    |
+| RAID 6  | Striping and Double Parity | 2                 | 6                    |
+| RAID 10 | Mirroring and Striping     | 1 per array       | 4                    |
+
+### RAID 0
+
+RAID 0 is the simplest RAID as it simply stripes the data that is distributed to the drives. 
+This means that the data is split between the two drives in order to increase the speed of reads and writes. If you have two drives in RAID 0 then you have a speed that is in theory two times faster. The speed of reads and writes is considered to be n times the speed of a single drive, where n is the number of drives in the array.
+
+RAID 0 is dangerous as it has zero redundancy. This means that if a single drive fails then so does the entire array. 
+
+RAID 0 is to be used for speed and performance, not long term storage. This is useful for doing large data calculations, where the computer can read and write large sets of data faster. While this doesn't make the calculation faster, it does reduce the time in between calculations, thus increasing performance when making multiple computaitons. 
+
+### RAID 1
+
+RAID 1 is when the information on a single drive is also writtent to a redundant drive. This array mirrors data and writes it simultaneously to multiple drives, making the write speed the same as the slowest drive. When reading from this array the speed can be as fast as the speed of the drives combined, as it can read the same data from multiple drives at once. 
+As long as a single drive in this array is still operable, all of the data should be preserved. This means that you can lose all but 1 drive and be OK.
+
+This is one of the safest RAID configurations but it does not offer the same performace gains as RAID 0.
+

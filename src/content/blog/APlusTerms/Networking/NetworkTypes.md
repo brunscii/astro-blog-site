@@ -2,7 +2,7 @@
 title: "Network Types"
 description: "A brief overview of the network types that appear on the A+ certification exam"
 author: "Chris Carlin"
-draft: false
+draft: true
 heroImage: "/public/blogContent/network.jpg"
 ---
 
@@ -45,5 +45,10 @@ What is my companies network?
 
 What network does my smart watch use? 
 - There is usually a PAN connection to your phone. 
-- Many can also use the Wi-Fi to connect to the LAN.
+- Many can also use the Wi-Fi to connect to the WLAN.
+- Some even have a direct acces to the WAN via a a cellular link, this allows use as a phone without being connected to or in range of your phone.
+
+What are some examples of a MAN?
+- A cable connection is considered a MAN, as it is spread over a city and connects many down taps together to a satellite feed.
+- WiMax, which is a sebset of IEEE 802.16, is a MAN since it connects using microwave at large distances.
 
