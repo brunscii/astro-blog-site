@@ -42,3 +42,7 @@ RAID 5 is when striping and parity is used in order to gain speed and maintain s
 ### RAID 6
 
 RAID 6 is similar to RAID 5 but there is double the parity data. This means that the parity bits are written to multiple drives and the array can handle up to 2 drive failures. The double parity als means that the array is more likily to succeed on a rebuild after a failure.
+
+## RAID 10
+
+RAID 10 is actually RAID 1 + 0. It is a combination of RAID 1's mirroring process as well as the striping process of RAID 0. This offers both speed and reliability. The downside is that it requires twice as many drives to acheive the same storage as a simple RAID 0 and is also slower since it has to mirror the data from the array. The benefits are the increased speed over RAID 1 as well as the ability to withstand a drive failure unlike RAID 0.
