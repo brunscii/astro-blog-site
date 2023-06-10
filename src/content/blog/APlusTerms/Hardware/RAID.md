@@ -35,3 +35,10 @@ As long as a single drive in this array is still operable, all of the data shoul
 
 This is one of the safest RAID configurations but it does not offer the same performace gains as RAID 0.
 
+### RAID 5
+
+RAID 5 is when striping and parity is used in order to gain speed and maintain some form of safety. In RAID 5 the data is striped across all disks and a parity bit is added for redundancy. This data is used to store the calculation from the XOR of the striped data. This can be used to recalculate and rebuild the array on the loss of a single drive. If more than one drive fails then the information cannot be recalculated. 
+
+### RAID 6
+
+RAID 6 is similar to RAID 5 but there is double the parity data. This means that the parity bits are written to multiple drives and the array can handle up to 2 drive failures. The double parity als means that the array is more likily to succeed on a rebuild after a failure.
