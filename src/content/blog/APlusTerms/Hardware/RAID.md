@@ -2,7 +2,8 @@
 title: "RAID Configurations"
 description: "A breif overview of RAID configurations for the A+ exam"
 author: "Chris Carlin"
-draft: true
+heroImage: "/public/blogContent/imgix-pgdaAwf6IJg-unsplash.jpg"
+draft: false
 ---
 
 ## What is RAID?
@@ -43,6 +44,15 @@ RAID 5 is when striping and parity is used in order to gain speed and maintain s
 
 RAID 6 is similar to RAID 5 but there is double the parity data. This means that the parity bits are written to multiple drives and the array can handle up to 2 drive failures. The double parity als means that the array is more likily to succeed on a rebuild after a failure.
 
-## RAID 10
+### RAID 10
 
 RAID 10 is actually RAID 1 + 0. It is a combination of RAID 1's mirroring process as well as the striping process of RAID 0. This offers both speed and reliability. The downside is that it requires twice as many drives to acheive the same storage as a simple RAID 0 and is also slower since it has to mirror the data from the array. The benefits are the increased speed over RAID 1 as well as the ability to withstand a drive failure unlike RAID 0.
+
+
+## Which RAID should I use?
+
+That all depends on your needs. If you need a fast read and write and aren't worried about data loss then RAID 0 just might be for you. Perhaps you need speed but also value your data, in that case there is RAID 10. It offers speed gains like RAID 0 with the data mirroring of RAID 1. 
+
+Maybe you want a large data pool for a server, RAID 5 might be useful as it allows you to combine size and speed of drives at the cost of the CPU. Since server processors are often built for this use case they are better equippewd for this work load than desktop processors. 
+Care more about your data, then RAID 6 might be useful as it offers many of the beneifts of 5 with an added set of parity information. This means rebuilds are more likily to succeed and more drives can fail. This makes it good for data servers or movie libraries, as data integrity is appreciated. 
+
