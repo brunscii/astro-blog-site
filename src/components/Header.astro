@@ -4,9 +4,11 @@ import { SITE_TITLE, BASE } from '../consts';
 ---
 
 <header>
+
 	<h1>
 		{SITE_TITLE}
 	</h1>
+
 	<nav>
 		<HeaderLink href={BASE + ""}>Home</HeaderLink>
 		<HeaderLink href={BASE + "blog"}>Blog</HeaderLink>
@@ -14,8 +16,11 @@ import { SITE_TITLE, BASE } from '../consts';
 		<HeaderLink href='https://christopherjcarlin.com' target="_blank">Portfolio</HeaderLink>
 		<HeaderLink href="https://github.com/brunscii" target="_blank">GitHub</HeaderLink>
 	</nav>
+
 </header>
+
 <style>
+
 	header {
 
 		display: grid;
@@ -33,32 +38,33 @@ import { SITE_TITLE, BASE } from '../consts';
 		position: fixed;
 
 	}
+
 	h1 {
 		/* font-size: 2.75rem; */
 		margin: 0;
-		color: var(--link-color);
+		color: var(--text-color);
 		text-align: center;
 		
 		/* width: fit-content; */
 		/* text-shadow: .1em .1em 0.12em #00ffffaf; */
 	}
 
-    nav {
-        /* margin-bottom: .2em; */
-				/* overflow: hidden; */
-    }
+  nav {
+      /* margin-bottom: .2em; */
+      /* overflow: hidden; */
+  }
 
-		nav a{
-			padding-inline: 1em;
-		}
+  nav a{
+    padding-inline: 1em;
+  }
 
-    nav a:hover {
-        /* background-color: #50105d; */
-				/* opacity:.3; */
-				border-radius: 5px;
-        background-color: rgba(63, 63, 63, 0.5);
-				/* background: linear-gradient( 45deg, rgba(255, 0, 0, 0.192), rgba(0, 0, 255, 0.329)), */
-										/* linear-gradient( -45deg, rgba(255, 0, 0, 0.192), rgba(0, 0, 255, 0.329)); */
-    }
+  nav a:hover {
+      /* background-color: #50105d; */
+      /* opacity:.3; */
+      border-radius: 5px;
+      background-color: rgba(63, 63, 63, 0.5);
+      /* background: linear-gradient( 45deg, rgba(255, 0, 0, 0.192), rgba(0, 0, 255, 0.329)), */
+                  /* linear-gradient( -45deg, rgba(255, 0, 0, 0.192), rgba(0, 0, 255, 0.329)); */
+  }
 
 </style>
