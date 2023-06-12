@@ -3,7 +3,7 @@ title: "RAID Configurations"
 description: "A breif overview of RAID configurations for the A+ exam"
 author: "Chris Carlin"
 heroImage: "/public/blogContent/imgix-pgdaAwf6IJg-unsplash.jpg"
-draft: false
+draft: true
 ---
 
 ## What is RAID?
@@ -56,3 +56,12 @@ That all depends on your needs. If you need a fast read and write and aren't wor
 Maybe you want a large data pool for a server, RAID 5 might be useful as it allows you to combine size and speed of drives at the cost of the CPU. Since server processors are often built for this use case they are better equippewd for this work load than desktop processors. 
 Care more about your data, then RAID 6 might be useful as it offers many of the beneifts of 5 with an added set of parity information. This means rebuilds are more likily to succeed and more drives can fail. This makes it good for data servers or movie libraries, as data integrity is appreciated. 
 
+## ZFS
+
+### What is ZFS and how it works
+
+ZFS is a file system that was made by Sun Microsystems for use on Solaris. It stands for *Z*ettabyte *F*ile *S*ystem and was designed to deal with larger files and capacities. 
+
+ZFS has since been adopted by freeNAS and has many RAID configurations. 
+
+RAID 0 is considered a striped VDev. RAID 1 is acheived by mirroring the VDevs. RAID 5 is considered RAIDZ1, RAID 6 is RAIDZ2 and RAIDZ3 is just a continuation of the pattern with 3 parity block instead of 2. 
