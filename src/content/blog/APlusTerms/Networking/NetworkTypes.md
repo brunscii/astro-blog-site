@@ -24,7 +24,9 @@ This is a form of network that is between a small number of devices and has limi
 
 ### Local Area Network (LAN)
 
-This is one of the most common forms of networks. It describes a network that is confined to an area such as a builing or house. This network is used to connect devices through the use of switches, which are devices that send data to specific devices. A LAN can be used to connect multiple devices to one internet connection like in a home network. Think about how your phone, computer, and game console can all connect to the internet at the same time. This is thanks to the switch and the router. The switch handles the traffic and the router connects the switch to the internet. Routers can also be used to connect multiple switches together in order to form a network of smaller networks.
+This is one of the most common forms of networks. It describes a network that is confined to an area such as a builing or house. This network is used to connect devices through the use of switches, which are devices that send data to specific devices. A LAN can be used to connect multiple devices to one internet connection like in a home network. Think about how your phone, computer, and game console can all connect to the internet at the same time. This is thanks to the switch and the router. The switch handles the traffic and the router connects the switch to the internet. Routers can also be used to connect multiple switches together in order to form a network of smaller networks. 
+
+For a list of the WLAN types, please visit [this](../wirelesstypes)
 
 ### Metropolitan Area Network (MAN)
 
