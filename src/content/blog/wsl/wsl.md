@@ -1,6 +1,7 @@
 ---
 title: 'WSL - Windows Subsystem for Linux'
 description: 'This is a reference for WSL'
+category: "WSL"
 ---
 
 Table Of Contents

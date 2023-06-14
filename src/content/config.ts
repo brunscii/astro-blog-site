@@ -21,7 +21,14 @@ const blog = defineCollection({
     draft: z
 			.boolean()
 			.optional(),
-		heroImage: z.string().optional(),
+
+		heroImage: z
+      .string()
+      .optional(),
+      
+    category: z
+      .string()
+      .optional(),
 	}),
 });
 

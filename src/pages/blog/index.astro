@@ -17,6 +17,7 @@ const posts = (await getCollection('blog')).sort(
 <html lang="en">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+
 		<style>
 			ul {
 				list-style-type: none;
@@ -24,7 +25,7 @@ const posts = (await getCollection('blog')).sort(
 			}
 			ul li {
 				display: grid;
-				grid-template-columns: 12ch 20ch;
+				grid-template-columns: 12ch 40ch 20ch;
 			}
 			ul li :global(time), ul li span, ul p {
 				font-style: italic;
@@ -41,25 +42,51 @@ const posts = (await getCollection('blog')).sort(
 				margin-left: 3em;
 				font-size: .8em;
 			}
+      .category {
+        color: red;
+      }
 		</style>
+
 	</head>
 	<body>
 		<Header/>
 
 		<main>
 			<section>
-				<ul>
+
+        <!-- #This is a list of the available blogs -->
+				<ul> 
+          <li>
+            <span> <b>Date</b></span>
+            <span><b>Title</b></span>
+            <span><b>Category</b></span>
+          </li>
+          <p><b>Description</b></p>
+          <br>
+
 					{
+            
 						posts.map((post) => (
 
-						// only show the link if the post is a final draft
+						  // only show the link if the post is a final draft
 							!post.data.draft && 
 							
 							<li>
-								{post.data.pubDate ? <FormattedDate date={post.data.pubDate} />
+
+								<!--- This is the date or dashes --->
+                {post.data.pubDate ? <FormattedDate date={post.data.pubDate} />
 								: <span> ----- </span>}
+
+								<!--- This is the Link --->
+                <span>
 								<a href={`${BASE}blog/${post.slug}/`}>{post.data.title}</a>
-							</li>
+                </span>
+
+                <span class="category">{post.data.category ?? post.data.category}</span>
+							
+              </li>
+
+							<!--- This is the Description --->
 							<p>
 								{post.data.description}
 							</p>
@@ -68,6 +95,7 @@ const posts = (await getCollection('blog')).sort(
 							// ''
 
 						))
+
 					}
 				</ul>
 			</section>

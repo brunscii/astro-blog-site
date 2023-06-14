@@ -4,6 +4,7 @@ description: "How to make commits for different dates in the command line. Make 
 pubDate: "Mar, 7, 2023"
 draft: false
 heroImage: "/public/blogContent/gitPic/gitTime.svg"
+category: "Tips or Tricks"
 ---
 ## Why commit to the past?
 

@@ -2,6 +2,7 @@
 title: 'What is DISM'
 description: 'Deployment Image Servicing and Management'
 draft: false
+category: "Windows"
 ---
 
 ## What is DISM

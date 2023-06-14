@@ -1,6 +1,7 @@
 ---
 title: 'WSLg'
 description: 'Windows Subsystems for Linux GUI'
+category: "WSL"
 ---
 
 # What is WSLg

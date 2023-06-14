@@ -4,6 +4,7 @@ description: "Grep reference"
 pubDate: '1/7/2023'
 updatedDate: '03/02/2023'
 draft: false
+category: "Linux Commands"
 ---
 <!-- # GREP -->
 

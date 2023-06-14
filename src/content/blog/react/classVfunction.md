@@ -1,6 +1,7 @@
 ---
 title:  'React Components: Class vs Function'
 description: 'This is a comparison of using React component classes vs Function components'
+category: "REACT"
 ---
 
 
