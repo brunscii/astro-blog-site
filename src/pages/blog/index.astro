@@ -45,6 +45,32 @@ const posts = (await getCollection('blog')).sort(
       .category {
         color: red;
       }
+      #blog-category-search {
+        align-self: center;
+        border: none;
+        border-radius: 2ch;
+        color: #badada;
+        text-align: center;
+        background-color: color-mix(in srgb, var(--text-header-color), black);
+        resize: none;
+        width: 80ch;
+      }
+      
+      #blog-category-search:focus {
+        background-color: #303030;
+        outline: 0;
+        color: orange;
+        
+      }
+
+      #blog-category-search::placeholder {
+        color: #badada;
+      }
+
+      #blog-category-search:focus::placeholder {
+        color: transparent;
+      }
+
 		</style>
 
 	</head>
@@ -53,6 +79,9 @@ const posts = (await getCollection('blog')).sort(
 
 		<main>
 			<section>
+
+        <!-- This is the search bar -->
+        <input type="search" placeholder="Search" name="category-search" id="blog-category-search"></in>
 
         <!-- #This is a list of the available blogs -->
 				<ul> 
