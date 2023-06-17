@@ -47,19 +47,19 @@ const posts = (await getCollection('blog')).sort(
       }
       #blog-category-search {
         align-self: center;
+        background-color: #303030;
         border: none;
         border-radius: 2ch;
-        color: #badada;
+        color: orange;
         text-align: center;
-        background-color: color-mix(in srgb, var(--text-header-color), black);
         resize: none;
         width: 80ch;
       }
       
       #blog-category-search:focus {
-        background-color: #303030;
+        background-color: #3f3f3f;
         outline: 0;
-        color: orange;
+        color: #b0d0d0;
         
       }
 
@@ -93,8 +93,12 @@ const posts = (await getCollection('blog')).sort(
           <p><b>Description</b></p>
           <br>
 
+
+          <!-- TODO: add responsive live search here 
+              that checks input and searches blog's by category or name -->
+          <!-- if nothing in the search then show this -->
 					{
-            
+
 						posts.map((post) => (
 
 						  // only show the link if the post is a final draft
