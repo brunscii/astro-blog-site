@@ -30,20 +30,34 @@ import { SITE_TITLE, BASE } from '../consts';
 		margin: 0;
 		padding: 0;
 		box-sizing: border-box;
-		background-color: rgba(0, 0, 0, 0.2);
+		/* background-color: rgba(0, 0, 0, 0.2); */
 		border-radius: 0px 0 10px 10px;
-		backdrop-filter: blur(5px) grayscale(.45);
-		-webkit-backdrop-filter: blur(5px) grayscale(.45);
+		backdrop-filter: blur(5px) opacity(0.75);
+     /* grayscale(.45); */
+		-webkit-backdrop-filter: blur(5px) opacity(0.75);
+     /* grayscale(.45); */
 		
 		position: fixed;
+    /* background-color: var(--bg-color); */
 
 	}
+
+  
 
 	h1 {
 		/* font-size: 2.75rem; */
 		margin: 0;
-		color: var(--text-color);
-		text-align: center;
+		color: var(--text-color-dark);
+    text-shadow: 0px 0px   2px black,
+                 0px 2px   2px black,
+                 0px -2px  2px black,
+                 2px 0px   2px black,
+                 2px 0px   2px black,
+                 2px -2px  2px black,
+                 -2px 0px  2px black,
+                 -2px -2px 2px black;
+                 
+    text-align: center;
 		
 		/* width: fit-content; */
 		/* text-shadow: .1em .1em 0.12em #00ffffaf; */
