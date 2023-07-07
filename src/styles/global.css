@@ -7,6 +7,7 @@
 	--text-color: #333;
 	--link-color: #008080;
 	--document-pading: 1rem;
+  --category-color: #cfccc4;
 }
 
 h1, h2, h3, h4, h5, h6, strong, b {
@@ -18,8 +19,8 @@ h1, h2, h3, h4, h5, h6, strong, b {
 		--bg-color: #123;
 		--bg-color-code : #2a3a4a;
 		--background-quote-color: #0a0c0f7d;
-		--text-header-color: #dadada;
-		--text-color: #dadada;
+		--text-header-color: #b0c0c0;
+		--text-color: #cfe9e9;
 	}
 
 	h1, h2, h3, h4, h5, h6, strong, b {
@@ -45,7 +46,8 @@ h1, h2, h3, h4, h5, h6, strong, b {
 	grid-template-rows: auto 1fr auto;
 	justify-items: center;
 	/* flex-direction: column; */
-	max-width: 86ch
+	max-width: 86ch;
+  scroll-behavior: smooth;
 }
 
 main {
