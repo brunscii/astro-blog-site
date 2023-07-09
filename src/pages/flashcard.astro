@@ -1,0 +1,102 @@
+
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      body{
+        margin: 0;
+        background-color: #333;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        min-height: 100vh;
+      }
+
+      .flash-card-back, .flash-card-front{
+        background: #eee;
+        height: 6.5em;
+        width: 14em;
+        padding: 1.2em 1em;
+        display: none;
+      }
+
+      .flash-card-front{
+        
+        text-align: center;
+        
+          
+      }
+
+      h2{  margin: 0;}
+
+      .line-blue, .line-red{
+        width: 100%;
+        height: 1em;
+        line-height: 1em;
+      }
+
+      .line-blue{
+        border-bottom: 1px solid blue;
+      }
+
+      .line-red{
+        border-bottom: 1px solid red;
+      }
+
+      .active{
+        display: block;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    
+    <div class="flash-card-front">
+      <h1 class="title">IP</div>
+    </div>
+      
+    </div>
+    <div class="flash-card-back">
+      <div class="line-blue">
+        <span>Internet Protocol</span>
+      </div>
+      
+      <div class="line-red"> </div>
+      
+      <div class="line-red">
+        
+      </div>
+      
+      <div class="line-red"> </div>
+      <span></span>
+      <div class="line-red"> </div>
+      <div class="line-red"> </div>
+    </div>
+  </body>
+
+  <script>
+    const cardFront = document.querySelector(".flash-card-front")
+    const cardBack = document.querySelector(".flash-card-back")
+
+
+    cardFront.classList.add('active')
+
+    cardFront.addEventListener('click',(e)=>{
+      cardFront.classList.toggle('active')
+      cardBack.classList.toggle('active')
+    })
+
+    cardBack.addEventListener('click',(e)=>{
+      cardFront.classList.toggle('active')
+      cardBack.classList.toggle('active')
+    })
+
+  </script>
+</html>
