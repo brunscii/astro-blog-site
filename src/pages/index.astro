@@ -9,27 +9,52 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 <html lang="en">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    
+    <style>
+      
+      #welcome-text {
+        font-size: 2em;
+        margin-bottom: 1ch;
+        color: var(--category-color);
+      }
+
+      .welcome-page-text {
+        color: var(--text-color);
+        margin-bottom: 2em;
+        line-height: 1.8em;
+      }
+
+    </style>
+
 	</head>
 	<body>
 		<Header />
 		<main>
-			<h1>Hello World!</h1>
-			<p>
-                Welcome to the blog. This is the place where I will drop musings, make notes on tech, and provide some clean reference grade material for your enjoyment. 
-                As a human being, I am often forgetful. Thankfully I have a domain and the ability to write markdown. The goal here is to create a place where I can share
-                what's going on in a blog format. 
-            </p>
-            <p>
-                Sometimes I will wrtite reference material for what I am studying. This can range from hardware standards to OS specific tools. 
-                Having this material in one place will prove useful for study. It may also prove useful to others studying for exams and such.  
+
+			<h1 style="
+        text-align:center;
+        font-size:3em;
+        ">Hello World!</h1>
+
+      <div id="welcome-text">Welcome to the blog.</div>
+			
+      <p class="welcome-page-text">
+          This is the place where I will drop musings, make notes on tech, and provide some clean reference grade material for your enjoyment. 
+          As a human being, I am often forgetful. Thankfully I have a domain and the ability to write markdown. The goal here is to create a place where I can share
+          what's going on in a blog format. 
+      </p>
+      <p class="welcome-page-text">
+          Sometimes I will wrtite reference material for what I am studying. This can range from hardware standards to OS specific tools. 
+          Having this material in one place will prove useful for study. It may also prove useful to others studying for exams and such.  
 			</p>
-            <p>
-                Other times I will write about things I struggled to learn, usually due to a lack of decent material online. This can range from React hooks like useContext(), 
-                to how DISM works for modifying windows images. It's not that there isn't material on these subjects, but rather that the material is hard to find or follow. 
-                I'm sure you've noticed how the search engines are getting worse and more full of ads these days. Having an easy to lookup referece will make it easy to relearn 
-                these topics if the need arises. It will also allow me to practice writing, something that I don't do enough.
-            </p>
+      <p class="welcome-page-text">
+          Other times I will write about things I struggled to learn, usually due to a lack of decent material online. This can range from React hooks like useContext(), 
+          to how DISM works for modifying windows images. It's not that there isn't material on these subjects, but rather that the material is hard to find or follow. 
+          these topics if the need arises. It will also allow me to practice writing, something that I don't do enough.
+          I'm sure you've noticed how the search engines are getting worse and more full of ads these days. Having an easy to lookup referece will make it easy to relearn 
+      </p>
 		</main>
 		<Footer />
 	</body>
+
 </html>
