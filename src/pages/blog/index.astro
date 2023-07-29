@@ -19,41 +19,53 @@ const posts = (await getCollection('blog')).sort(
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 
 		<style>
+
+      
+
 			ul {
 				list-style-type: none;
 				padding: unset;
 			}
+
 			ul li {
 				display: grid;
 				grid-template-columns: 12ch 40ch 20ch;
 			}
+
 			ul li :global(time), ul li span, ul p {
 				font-style: italic;
 				color: #595959;
 			}
+
 			ul li span {
 				/* justify-self: center; */
 			}
+
 			ul li a:visited {
 				/* color: #8e32dc; */
 			}
+
 			ul p {
 				/* text-indent: 3em; */
 				margin-left: 3em;
 				font-size: .8em;
 			}
+
       .category {
         color: var(--category-color);
       }
+
       #blog-category-search {
         align-self: center;
         background-color: #303030;
         border: none;
         border-radius: 2ch;
         color: orange;
-        text-align: center;
         resize: none;
+        padding: .1em;
+        text-align: center;
         width: 80ch;
+
       }
       
       #blog-category-search:focus {
