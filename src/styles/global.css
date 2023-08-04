@@ -59,8 +59,6 @@ main {
     box-sizing: border-box;
 }
 
-
-
 a {
 	color: var(--link-color);
 	/* color: #3273dc; */
