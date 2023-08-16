@@ -110,13 +110,12 @@ const posts = (await getCollection('blog')).sort(
               that checks input and searches blog's by category or name -->
           <!-- if nothing in the search then show this -->
 					{
-            
 						posts.map((post) => (
 
 						  // only show the link if the post is a final draft
 							!post.data.draft && 
 							
-							<li>
+							<li class="blog-post">
 
 								<!--- This is the date or dashes --->
                 {post.data.pubDate ? <FormattedDate date={post.data.pubDate} />
@@ -149,4 +148,19 @@ const posts = (await getCollection('blog')).sort(
 		<Footer />
 
 	</body>
+
+  <script>
+    let searchTerm = document.querySelector("#blog-category-search").textContent;
+    let searchResults = document.querySelectorAll(".blog-post");
+    console.log(searchTerm)
+
+    searchResults.forEach( (res) =>{
+      
+      
+      console.log(res.innerText);
+
+      console.log(res.innerText.includes(searchTerm))
+
+    })
+  </script>
 </html>
