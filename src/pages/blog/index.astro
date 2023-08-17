@@ -96,7 +96,7 @@ const posts = (await getCollection('blog')).sort(
         <input type="search" placeholder="Search" name="category-search" id="blog-category-search"></in>
 
         <!-- #This is a list of the available blogs -->
-				<ul> 
+				<ul id="blog-list"> 
           <li style="border-bottom:solid 3px #30303065;">
             <span><b>Date</b></span>
             <span><b>Title</b></span>
@@ -150,17 +150,41 @@ const posts = (await getCollection('blog')).sort(
 	</body>
 
   <script>
-    let searchTerm = document.querySelector("#blog-category-search").textContent;
+
+    let searchBox = document.querySelector("#blog-category-search");
+    let searchTerm = searchBox.textContent;
     let searchResults = document.querySelectorAll(".blog-post");
-    console.log(searchTerm)
+    let blogList = document.querySelector("#blog-list");
+    
+    searchBox.addEventListener("input", (input) => {
+      console.log(input);
+      searchTerm = searchBox.value;
+      console.log(searchTerm);
 
-    searchResults.forEach( (res) =>{
-      
-      
-      console.log(res.innerText);
-
-      console.log(res.innerText.includes(searchTerm))
-
+      updateBlogList(searchTerm);
     })
+
+    //This is where we search the list of blogs for matches and update the list
+    function updateBlogList( SearchTerm ) {
+      searchResults.forEach( (res) => {
+        if (res.innerText.includes(searchTerm) && searchTerm != "") {
+          console.log(res.innerText + "match");
+          console.log(res);
+          res.style.backgroundColor = "red";
+        }
+      })
+    }
+
+    console.log(searchTerm);
+    console.log(searchBox);
+
+    // searchResults.forEach( (res) =>{
+      
+      
+    //   console.log(res.innerText);
+
+    //   console.log(res.innerText.includes(searchTerm));
+
+    // })
   </script>
 </html>
