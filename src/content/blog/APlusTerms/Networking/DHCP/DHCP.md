@@ -16,9 +16,12 @@ DHCP servers usually have a given IP address range, subnet mask, lease time, def
 
 ## How to configure DHCP
 
-You want to take into account for your IP range and lease time when configuring a DHCP server. 
+Most of the time the default settings should work fine for your DHCP server; however, there may be a time in which you need to change the settings to suit your needs. You want to take into account for your IP range and lease time when configuring a DHCP server in order to accomadate all of the devices and traffic necessary. 
 
 ### Example 
+
+
+#### Coffee Shop
 
 Let's say that you are configuring a router for a local coffee shop. Observing the shop we notice that there is never more that 20 devices connected simultaneously. While an IP range of 192.168.1.1-20 might cover the current need, what happens when more devices try to connect. There are no more IP addresses to use. These addresses are held to a MAC address for a given lease time. To give ourselves some leeway, let's just set the range to from 192.168.1.1-127.
 
