@@ -25,5 +25,13 @@ Cat 5e, on the other hand, is a newer form of Cat 5 that has been used since 200
 
 Cat 5e is a cheap alterative to Cat 6 for short runs or slower networks. If you need a cable for connecting devices at gigabit speed then Cay 5e will work just fine. It is not recommended for newer networks since most routers and computers support 2.5Gbps now. 
 
-If your internet is not faster than 1Gbps then do you need a faster cable?
+#### If your internet is not faster than 1Gbps then do you need a faster cable?
+
 The answer is that is depends on your network. If you do not need to transfer files between devices then Cat 5e should work for you. If you have a NAS or multiple devices communicating, and you have a faster than gigabit NIC, then you should consider faster cables. If you want to build a network that has more room to grow, then you should also consider a newer cable.
+
+### Cat 6 and Cat 6a
+
+Cat 6 is a standard that is backwards compatible with Cat 5/5e and Cat 3, but allows for a much faster transfer rate. Cat 6 runs at 10 Gbps upto 250 MHz over 55 meters and Cat 6a can run at 10 Gbps upto 500 MHz at 100 meters.
+
+The advantage of Cat 6 is the higher speeds and the use of the same connector, making it universally recommended for most newer networks.
+
