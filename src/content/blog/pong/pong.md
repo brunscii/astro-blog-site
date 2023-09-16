@@ -48,3 +48,42 @@ The logic is simple, if the ball hits a paddle or the top or bottom wall then it
 Once the ball is out of bounds and the point is score it should be reset and cast toward the opposing team.
 
 ### Collision Detection
+
+Collision detection should be performed on movement since this is the only time that collision could happen. 
+Logically speaking, collision can only happen after a movement, thus we check after each movement or frame update.
+
+#### Box collision
+
+If we think of the ball and paddles as a box then we can see if the balls outer most point is in conflict with that of the paddles. 
+A box has a range on the x and y axis. If the left most point on the box is within the range of another object then we have a collision.
+
+This is a very simple form of collision detection that can be used on the x and y axis. The limitation being that a curve would require a bit more checking to see if there is in fact a collision. 
+
+#### Bounds Collision
+
+Using the same box collision for the ball and a fixed x and y position, we can figure out if the ball is in bounds or not. 
+If we set the game board as starting at 0,0 and ending at 100,100 and we have a ball that is 5 in size then we can check for collisions. 
+For instance, if the ball is at position 99,20 then we can say that there is a collision on the right side since 99+5 is 104 and is outside of the bounds of the board.
+
+#### Directional Collision Detection
+
+Since we know the direction of the ball's movement we only need to check for collisions on the side of the direction of travel. If we are moving to the left, then there is no need to check for collision on the right side. 
+The ball moves to the right on a left collision with the paddle, thus we no longer need to check the left side while moving towards the right. 
+For simplicity, collision detection should only check on the directions of motion of any object.
+
+#### Collision Detection Function
+
+We need to pass in the direction of travel, the range on the x and the range of the y of the object, and the x and y range of any object to be tested against. 
+
+This could look something like 
+```detect( direction, objectX, objectY, paddleX, paddleY)```
+
+Since the paddles have a fixed x location and a varying y location, we can also forgo the paddleX.
+``` detect( direction, objectX, objectY, paddleLeftY, paddleRightY ) ```
+
+This can use the direction to check for the left or right paddle. This might seem a bit wasteful though sending needless information through.
+
+We could also use  `detect( object1X, object1Y, object2X, object2Y )`, which would be more generic and slightly less efficient. 
+
+How about ``` detect( direction, object1COORD, object2COORD ) ```?
+This still passes in unused information, however, we can treat the COORD positions as a tuple type and keep the information useful since it has to exist anyway. 
