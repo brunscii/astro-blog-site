@@ -87,3 +87,10 @@ We could also use  `detect( object1X, object1Y, object2X, object2Y )`, which wou
 
 How about ``` detect( direction, object1COORD, object2COORD ) ```?
 This still passes in unused information, however, we can treat the COORD positions as a tuple type and keep the information useful since it has to exist anyway. 
+
+### Score
+
+Since we know how collision detextion works, we can then set the logic to trigger a score event into the collision detection. 
+
+The collision detection on the left and right bounds need to trigger a score for the right or left player respectively.
+So basically we can add logic that the ball going out of the right bounds would score a point for the left player. This would then trigger a score update, thus incrementing the plaer's score by a predetermined amount.
