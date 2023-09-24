@@ -94,3 +94,5 @@ Since we know how collision detextion works, we can then set the logic to trigge
 
 The collision detection on the left and right bounds need to trigger a score for the right or left player respectively.
 So basically we can add logic that the ball going out of the right bounds would score a point for the left player. This would then trigger a score update, thus incrementing the plaer's score by a predetermined amount.
+
+Since our score is updating, it also makes sense to call a function to redraw or update the score. 
