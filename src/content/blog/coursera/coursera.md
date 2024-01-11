@@ -38,8 +38,8 @@ Having worked retail for many years, my college degrees are somewhat less relava
 
 The simple answer is that I am hoping to grab a data analytics job either locally or remotely. Hopefully this will pay off.
 I would like to be financially stable again and we'll see if this is at all helpful.
-
 After spending a couple of years learning and applying to jobs I need to commit to something other than GitHub. Working with data is fun and so is the analysis part of it. Only time will tell if this provides an opportunity for employment.
+
 
 
 ### >What I would like to learn
