@@ -3,7 +3,7 @@ title: "RAID Configurations"
 description: "A breif overview of RAID configurations for the A+ exam"
 author: "Chris Carlin"
 heroImage: "/public/blogContent/imgix-pgdaAwf6IJg-unsplash.jpg"
-draft: true
+draft: false
 ---
 
 ## What is RAID?

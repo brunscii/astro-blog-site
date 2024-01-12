@@ -2,7 +2,8 @@
 title: "yt-dlp"
 description: "Cool cmd line tool for downloading videos"
 pubDate: 1/10/24
-draft: true
+category: "Review"
+draft: false
 ---
 
 ## What is it?

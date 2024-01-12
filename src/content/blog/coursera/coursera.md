@@ -1,8 +1,9 @@
 ---
 title: "Coursera"
 description: "My experiences"
-draft: true
 pubDate: '01/08/24'
+category: "Review"
+draft: false
 ---
 
 ## Intro
