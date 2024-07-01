@@ -86,16 +86,16 @@ import Footer from '../components/Footer.astro';
     const cardBack = document.querySelector(".flash-card-back")
 
 
-    cardFront.classList.add('active')
+    cardFront?.classList.add('active')
 
-    cardFront.addEventListener('click',(e)=>{
-      cardFront.classList.toggle('active')
-      cardBack.classList.toggle('active')
+    cardFront?.addEventListener('click',(e)=>{
+      cardFront?.classList.toggle('active')
+      cardBack?.classList.toggle('active')
     })
 
-    cardBack.addEventListener('click',(e)=>{
-      cardFront.classList.toggle('active')
-      cardBack.classList.toggle('active')
+    cardBack?.addEventListener('click',(e)=>{
+      cardFront?.classList.toggle('active')
+      cardBack?.classList.toggle('active')
     })
 
   </script>
