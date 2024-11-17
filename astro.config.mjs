@@ -14,7 +14,7 @@ export default defineConfig({
   markdown: {
     syntaxHighlight: 'shiki'
   },
-  output: "server",
+  output: "static",
   adapter: netlify({
     edgeMiddleware: true
   })
