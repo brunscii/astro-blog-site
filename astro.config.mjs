@@ -8,7 +8,7 @@ import netlify from "@astrojs/netlify/functions";
 // https://astro.build/config
 export default defineConfig({
   site: 'https://brunscii.github.io/astro-blog-site',
-  base: '/astro-blog-site',
+  base: '/astro-blog-site/',
   publicDir: '/astro-blog-site/',
   integrations: [mdx(), sitemap()],
   markdown: {

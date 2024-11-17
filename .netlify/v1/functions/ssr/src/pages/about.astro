@@ -1,0 +1,49 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<BaseHead title='about the blog' description="about page for Chris's blog" />
+
+    <style>
+      h1:first-of-type {
+        margin-top: 0;
+      }
+    </style>
+	</head>
+	<body>
+		<Header />
+
+		<main>
+			<h1>About</h1>			
+			<p>
+				This blog is meant as a place for me to drop findings and concepts about tech. 
+				It is a mix of reference material and notebook; allowing me to dump my brain 
+				and not worry about forgetting important concepts. This will include thoughts, reviews,
+				or just ideas that I wish to write down. The goal here is to share knowledge with
+				myself as well as others. 
+			</p>
+            <p>
+                Some of the goals of this blog are to create references and articles that are written in a similar format.
+                This probably won't be anything as large and robust as <a href="https://developer.mozilla.org/en-US/" target="_blank">MDN</a>,
+                Mozilla Developer's Network, which I use quite often. This is meant to be more of a small scale reference and a way for me to 
+                practice my writing. The concepts won't be as focused as MDN either, as I will have a broad range of topics to cover and not
+                just web development. 
+            </p>
+            <p>
+                On the rare occasions that I decide to write personal content, I will probably tag it as such, or possible branch it into a separate 
+                area of the site. This way I don't interefere with the flow of the site. 
+            </p>
+            <p>
+                Ideally all blog posts will have tags as to what the blog regards, whether A+ study material, Hardware, Software, Programming, 
+                Web Development, React, Astro, Linux, and so on and so forth.
+            </p>
+		</main>
+		
+		<Footer />
+	</body>
+</html>
