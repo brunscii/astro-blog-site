@@ -16,6 +16,6 @@ export default defineConfig({
   },
   output: "static",
   adapter: netlify({
-    edgeMiddleware: true
+    // edgeMiddleware: true
   })
 });
