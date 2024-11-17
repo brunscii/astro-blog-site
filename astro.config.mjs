@@ -2,8 +2,9 @@ import { defineConfig } from 'astro/config';
 import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 
+
 // https://astro.build/config
-import netlify from "@astrojs/netlify/functions";
+import netlify from "@astrojs/netlify";
 
 // https://astro.build/config
 export default defineConfig({
@@ -14,8 +15,8 @@ export default defineConfig({
   markdown: {
     syntaxHighlight: 'shiki'
   },
-  output: "static",
+  output: "server",
   adapter: netlify({
-    // edgeMiddleware: true
+    edgeMiddleware: true
   })
 });
