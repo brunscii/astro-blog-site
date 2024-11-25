@@ -27,7 +27,7 @@ let searchTerm = ''
       .hidden {
         visibility: hidden;
         display: none;
-        }
+        position:absolute;
       }
       
 
@@ -122,7 +122,8 @@ let searchTerm = ''
           <!-- TODO: add responsive live search here 
               that checks input and searches blog's by category or name -->
           <!-- if nothing in the search then show this -->
-					{ 
+					
+          {
 						posts.map((post) => (
 
 						  // only show the link if the post is a final draft
