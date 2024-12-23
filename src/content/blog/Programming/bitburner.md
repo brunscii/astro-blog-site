@@ -3,16 +3,52 @@ title: "Bitburner"
 description: "Bitburner - a brief overview"
 author: "Chris Carlin"
 pubDate: 11/20/24
-draft: true
+draft: false
 ---
+>
+> Bitburner is a programming-based incremental game. Write scripts in JavaScript to automate gameplay, learn ?> skills, play minigames, solve puzzles, and more in this cyberpunk text-based incremental RPG.
+> 
+> <cite>-- Steam Store Page</cite>
+
+
+> ABOUT THIS GAME
+> After 5 years of development, contributions from hundreds of developers, the critically acclaimed open source > programming hacking sim is available on Steam.
+> 
+> Inspired by games like Else Heart.break(), Hacknet, Uplink, and Deus Ex, Bitburner is a programming-based idle > incremental RPG where you, the player, take the role of an unknown hacker in a dark, dystopian world. The game > provides a variety of mechanics and systems that can be changed through coding and solved or automated in > whatever way you find suitable.
+> 
+> While a very basic programming background is recommended, it is not required to play the game!
+> 
+> Write scripts in JavaScript to automate your gameplay
+> 
+> Hack through a network of servers to train your abilities and earn money
+> 
+> Solve real programming questions to hone your skills and earn rewards
+> 
+> Improve your character with 100+ Augmentations
+> 
+> Trade in the stock market and write automated trading scripts
+> 
+> Interact with various gameplay mechanics to increase your stats and earn money
+> 
+> Explore the world and discover different companies, locations, and factions
+> 
+> Mini-games
+> 
+> Unlock secret perma-upgrades
+> 
+> Continuing development!
+>
+> <cite>-- also Steam Store Page</cite>
 
 ## What is it
 
 Bitburner is a free game that is available on steam. The goal of the game is hard to explain as it depends on the player.
-This game is a cyberpunk style text based rpg. The goal is to make money and level up. 
-The basic mechanics of making money are hacking, working, and crime.
-The game is designed to teach basic computer science topics like using a unix-like terminal and scripting.
-It is hard to talk about the plot of the game, what little there is, without including spoilers.
+This game is a cyberpunk style text based rpg, rouge-like, idler. What the heck does that mean? It is a cyberpunk themed game that is set in the year 2077. It has RPG elements such as stats that you rank up. It is an idler in the sense that you will have times in which it is best to just let the game go while you sleep since there is quiet a bit of automation in the game. 
+Your The goal is to make money and level up in game through challenges that can be solved with code. 
+The basic mechanics of making money are hacknets( automated servers that earn you money ), hacking servers, working ( for companies or factions ), crime, the stock market, and infiltration. 
+The game is designed to teach basic computer science topics such as how to use a unix-like terminal and basic programming in JavaScript.
+It is hard to talk about the game without giving out spoilers. Luckily there is not a ton of plot to the game and what lore there is about the Bit burner universe can be found through exploring the servers in-game. 
+This game has a trend where it introduces new challenges as soon as you have solved the current ones.
 
 ## Basic Gameplay
 
@@ -145,3 +181,16 @@ In this example we can see that the amount the security was raised from both the
 ### Scripting
 
 The scripting portion of the game is the real bread and butter, the meat and potatoes, the main kit and caboodle. The purpose of this game is to help people learn coding concepts in a fun way. The scripting language they use is a beginner friendly version of JavaScript called Netscript.
+
+If you have ever written JavaScript, ECMAscript, TypeScript, or any of the other JS variants then you will be quite adept in scripting in this game. The game gives you a basic editor styled after either vim or nano, with much of the "intellisense" style autocompletions and suggestions. 
+The games suggestions are a nice touch as it gives a similar popup style tooltip that let's you see the documentation of the Netscript libraries. This gets you started quickly so you don't have to spend your time reading documentation.
+
+The game has a built-in library called NS.
+<br/>NS is the basic functionality for the game. It includes the hack, weaken, and grow functions. 
+
+**For a full list of the basic Netscript functions look [here](https://bitburner.readthedocs.io/en/latest/netscript/netscriptfunctions.html)**  
+
+Later in the game you will get to the bladeburner portion of scripting where you can control the purchase of servers and joining factions. This speeds up late gameplay.
+As I have not reached that part of the game yet I'll just have to put that into part 2 of this blog. I'll link to it here when I figure it out.
+
+
