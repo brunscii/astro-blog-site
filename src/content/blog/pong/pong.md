@@ -1,6 +1,7 @@
 ---
 title: "Building Pong"
 description: "Building pong using Typescript, CSS, and SVGs" 
+draft: true
 ---
 
 ## What is Pong?

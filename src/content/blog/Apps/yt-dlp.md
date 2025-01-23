@@ -24,5 +24,5 @@ I have used this to split audio from videos, such as from level1techs news show.
 
 ## Rating
 ### ★★★★★
-This tool has done as promised with most of what I ask of it. It is an amazing tool with over 1000 contributors on github. 
+This tool has done as promised with most of what I ask of it. It is an amazing program with over 1000 contributors on github. 
 

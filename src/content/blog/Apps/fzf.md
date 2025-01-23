@@ -3,7 +3,7 @@ title: "fzf"
 description: "Command line tool for performing a fuzzy search for files and folders"
 pubDate: 9/07/24
 category: "Review"
-draft: false
+draft: true
 ---
 
 
