@@ -57,4 +57,27 @@ autoremove (apt-get(8))
 ```
 Autoremove removes dependency packages you don't need anymore. If the package is an app that you don't want to have removed you can mark it, or just reinstall it to keep it. 
 
-Back in the day, when I started using fedora, the package manager was YUM. YUM, at least in fedora 8, used `update` to perform package updates and `upgrade` to update the os and new packages after downloaded the new package lists. Now upgrade and update are synonyms and update is just aliased to upgrade. Confusing, right?
+Back in the day, when I started using fedora, the package manager was YUM. YUM, at least in fedora 8, used `update` to perform package updates and `upgrade` to update the os and new packages after downloaded the new package lists. 
+Now upgrade and update are synonyms and update is just aliased to upgrade. Confusing, right? Don't worry about it. It's simple enough nowadays.
+
+## The advantage
+
+Like we said before, linux doesn't usually hit you with the forced restarts and pesky popups. That being said, updates can be very important for security reasons as they carry patches to security holes and fixes to bugs.
+
+A more modern advantage of linux updates is that you don't get advertisements for products from the maker of the OS with every update. No Microsoft, I don't want to sign up for 365 for 50% off. It should be free to make up for how bad their OS has been lately.
+
+
+## Microsoft's version
+
+Some of the changes to the windows terminal like the addition of WSL, the new terminal app, and aliasing and accepting more linux syntax makes Windows a little more bearable in the command line. 
+Winget is another tool that makes Windows a little better for automation than it once was.
+Microsoft made their own package manager, winget, in order to compete in the IT space.
+
+Using `winget update --all --silent` will run the command without popping up installer windows and whatnot.
+That's right, popups. Winget will try to run the installer instead of just installing. Windows doesn't usually handle packages like linux does. For most distros you hava a package manager that installs all of the software.
+Of course it would make sense for the same package manager to update the software it installed. 
+In Windows we use separate installers. In fact, there are a few different type of installers. There are .msi and .msix files that install the program.
+There are also portable apps that don't require installation. Either way, how do we now control the installation?
+We download and run the installer and automate the process.
+
+So you can update apps easily but the OS itself will still give you the hard rebooting, advertisement pushing, classic Microsoft updates.
