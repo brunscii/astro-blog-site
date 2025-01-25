@@ -1,10 +1,10 @@
 ---
-title : "Updating from Fedora server 37 to 41"
+title       : "Updating from Fedora server 37 to 41"
 description : "Documentation of me updating my much out of date file serve"
-author : "Chris Carlin"
-draft : false
-category : "Linux"
-pubDate : "01/24/2025"
+author      : "Chris Carlin"
+draft       : false
+category    : "Linux"
+pubDate     : "01/24/2025"
 ---
 
 ## Introductions
@@ -132,7 +132,26 @@ After removing the repositories that were giving the warnings before we had zero
 Yes going through each version is tedious and I could have probably skipped a few versions without issue.
 It is a safe way to perform the upgrade though since it is tested going from one version to the directly newer one.
 
-I will add that it is useful to add the `--allowerasing` flag to the updates every once in a while as it will remove unneeded dependencies and clear up space used by downloaded packages that are already installed.
+I will add that it is useful to add the `--allowerasing` flag to the updates every once in a while as it will remove unneeded dependencies and you can run `sudo dnf autoremove` to clear up space used by downloaded packages that are already installed or no longer needed. Actually --allowerasing isn't even mentioned in the DNF5 man page as it is on by default. 
+
+The man pages used to say this:
+```
+--allowerasing
+    Allow erasing of installed packages to resolve
+    dependencies. This option could be used as an alternative
+    to the yum swap command where packages to remove are not
+    explicitly defined.
+```
+
+Also from the old man pages:
+```
+dnf [options] autoremove
+    Removes all packages from the system that were originally
+    installed as dependencies of user-installed packages, but
+    which are no longer required by any such package.
+```
+
+DNF5 has a few other new features I'll have to play around with since I made it to Fedora Server 41.
 
 ## Conclusion
 
