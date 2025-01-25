@@ -1,10 +1,10 @@
 ---
-title: "Updating from Fedora server 37 to 41"
-description: "Documentation of me updating my much out of date file serve"
-author: "Chris Carlin"
-draft: false
-category: "Linux"
-pubDate: "01/24/2025"
+title : "Updating from Fedora server 37 to 41"
+description : "Documentation of me updating my much out of date file serve"
+author : "Chris Carlin"
+draft : false
+category : "Linux"
+pubDate : "01/24/2025"
 ---
 
 ## Introductions

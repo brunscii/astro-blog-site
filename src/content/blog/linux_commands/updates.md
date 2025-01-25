@@ -1,9 +1,10 @@
 ---
-tite: "Updating Linux"
+title: "Updating Linux"
 description: "Updating Linux"
 author: "Chris Carlin"
-draft: true
+draft: false
 category: "Linux Commands"
+pubDate: "01/24/2025"
 ---
 
 ## How to update most distros
