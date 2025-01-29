@@ -176,3 +176,6 @@ I did this completely through SSH which made it hard to tell when the server was
 If you are doing this on the desktop version of Fedora, aka Fedora Workstationm, then you can easily use the GUI to perform the system update. 
 I, however, prefer the feel, speed, and responsiveness of doing this through the terminal.
 You get more information about what is going on and you have more control over the entire process.
+
+The drawback of doing this though SSH is that I didn't notice that my screen was frozen on "booting Fedora 41" since I wasn't physically using the machine. A little troubleshooting of nVidia drivers will fix that though, hopefully. 
+
