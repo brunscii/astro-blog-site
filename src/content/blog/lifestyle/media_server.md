@@ -11,19 +11,27 @@ draft: true
 Having seen the power of jellyfin a few years back, I decided to run a media server for my TV. It worked pretty well on windows and did a fair job of figuring out what my media was. The problem? My file server runs linux. I only have bout 7 TB in my desktop and, while that sounds like a enough for a decent server, most of my space is taken up by steam games.
 
 I have a file server for a reason. I wanted a backup of my movies, tv shows, drives, games, and whatever else. Currently it isn't set up how I would like due to budget cuts. 
-Eventually I want to set up a RAIDZ1 configuration with several 20 TB drives. Until then however, we will have to settle for the many 1 and 2 TB drives hoddled together JBOD style in this raggety old computer. 
+Eventually I want to set up a RAIDZ1 configuration with several 20 TB drives. Until then, we will have to settle for the many 1 and 2 TB drives hoddled together JBOD style in this raggety old computer. 
 
-This server is made from an on gaming computer that was mid at the time. It's AMD from before AMD was good.  AMD from when their stock sank to $2 a share. 
-That's right, in case you don't remember, the fx-8150 was one of the chips that led AMD into the grave. 
+This "server" is made from an on gaming computer that was mid tier when I built it. It's AMD from before AMD was good. AMD from when their stock sank to $2 a share. 
+That's right, in case you don't remember, the fx-8150 was one of the chips that almost led AMD into the grave. 
 AMD released the first "eight core" desktop processor and I had to have it. I was happy with the dual core Athlon CPU I had years before so I chose the FX-8150.
-Ahh the 8150, a hot, slow, turd of a processor. It claimed to have 8 cores but the cores shared resources for every 2 cores making it seem more like a 4 core with hyper threading.
-In fact, AMD had to pay $12 million is a settlement over the fact that the claimed it was an 8 core CPU.
 
-Thankfully AMD has recovered and makes some very nice desktop and server class chips now. 
+Ahh the 8150. A hot, slow, turd of a processor. It claimed to have 8 cores but the cores shared resources for every 2 cores making it seem more like a 4 core with hyper-threading than a true 8 core CPU.
+In fact, AMD had to pay $12 million is a settlement over the fact that the claimed it was an 8 core CPU. Never got my money AMD...
 
-The GPU in the server is a 980ti Hybrid. A water cooled beast of a graphics card for the time. Unfortunately it's 5 generations too old to be useful. It sucks at x265 and x264 transcoding. It doesn't support AV1 or HEVC transcode and suffers from a bad case of NVIDIA sucking at linux support.
+Fortunately, AMD has recovered and makes some very nice desktop and server class chips now. Unfortunately, they are priced at a premuim as well.
+
+The GPU in the "server" is a 980ti Hybrid from the once great EVGA. A water cooled beast of a graphics card for the time. 
+While it was great at the time, it's 5 generations too old to be useful today. It sucks at x265 and x264 transcoding. It doesn't support AV1 or HEVC transcode and suffers from a bad case of NVIDIA sucking at linux support.
+
 Even the most basic of Intel CPUs can do these things. CPUs are way worse at these tasks but Quick Sync is a beast.
 In fact, Quick Sync came out right around the time of this AMD flop that is in here.
+
+Why did you buy this overpriced card to pair with such a weak CPU?
+I didn't, it was given to me for fixing someone elses computer when it was only a single generation old.
+
+Anyways, that's enough rambling. On to the actual point of this post.
 
 ## Jellyfin is great, until it isn't
 
