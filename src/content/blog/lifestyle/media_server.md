@@ -3,7 +3,7 @@ title: "Universal Media Server"
 description: "Can Universal Media Server do what Jellyfin can't?"
 author: "Chris Carlin"
 pubDate: "02/14/2025"
-draft: true
+draft: false
 ---
 
 ## Intro
@@ -834,5 +834,4 @@ If you are having issues with UMS not wanting to set up and just going to the lo
 run_wizard = true
 ```
 
-If you have a desktop version of fedora or perhaps a server with a Desktop Environment installed, then you can do the configuration locally through the web ui or the actual GUI of the program.
-
+If you have a desktop version of fedora or perhaps a server with a Desktop Environment installed, then you can do the configuration locally through the web ui or the actual GUI of the program. This will save some time.
