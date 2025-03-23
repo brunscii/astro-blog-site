@@ -9,15 +9,34 @@ draft: false
 Warning -- This is still a work in progress
 
 ## Intro
+With the rise and fall of streaming services and the withdrawel of several shows and movies that once justified their existence, it becomes increasingly hard to justify the cost. I found myself several times over watching something on a streaming service instead of just standing up and finding the DVD or BLURAY that I own. But when the benefits of convienience is taken away what are we left with? A costly bill of services unused, sometimes for months on end.
 
-Having seen the power of jellyfin a few years back I decided to run it on my fileserver. It worked pretty well when I tried it on windows and it did a fair job of figuring out what my media was. The problem? My file server runs linux and while I have heard of people having good luck running Jellyfin on linux, I have not. I only have bout 7 TB in my desktop and, while that sounds like a enough to serve some media, most of my space is taken up by steam games and repos.
-This is why it is crucial to run it on my server.
+I used to run XBMC and later KODI on my media PC and I even had it connected to my file server at one time. Over the years however, I have fellen prey to the smart-tv/streaming service trap. Netflix, Hulu, HBO max, Amazon, and Disney+ were all active on my TV. Having seen that I only watch a few services, and mostly for shows and movies I already own, I decided it was time to downsize. My roommate got the ad-tier of Netflix after I cancelled for their korean dramas and as it turned out we both had Hulu as they had a Disney+ subscription. I cancelled the HBO/Hulu subscription as I only really used it for The Last of Us and old movies. Also Hulu originals went down hill after they were acquired by the big D. Using my many shelves and boxes of Vinyls's, CD's, DVDs, Blu-rays, and even old VHSs it was time to use the backup's I had once made and work on the new material I gained during the lazy times of the golden age of streaming. For legal reasons I won't advocate for piracy eventhough many streamers, including LTT, may say they use it to aqcuire their "digital backups" of the media they own. I don't want to debate that and will just say this is for your media files. I will also not go into detail on how to rip or backup media here as this is more about the streaming of personal files and not of their aqcuisition. I have spent many a black friday buying whole series of TV shows and collecting movies on sale.
 
-Like many nerds, I have a file server for my backups and to store copies of my movies and tv shows. I even keep copies of my ebooks and games so I hopefully don't lose anything. Shoot, I even have copies of my old college work from my CS classes.
+## File server
+
+Like many nerds, I have a file server for my backups and to store copies of my pictures, movies, and tv shows. I even keep copies of my ebooks and games so I hopefully don't lose anything. Shoot, I even have copies of my old college work from my CS classes.
 
 The server is an old 8 core processor that can keep up with a few VMs and a server version of Fedora.
-The GPU in the server is a 980ti Hybrid. A water cooled beast of a graphics card for the time. Unfortunately it's 5 generations too old to be useful. It sucks at x265 and x264 transcoding, it doesn't support AV1 or HEVC transcode, and suffers from a bad case of NVIDIA drivers being garbage on linux. Thanks Jensen Huang. <br>
+The GPU in the server is a 980ti Hybrid. A water cooled beast of a graphics card when it was new. Now unfortunately it's 5 generations too old to be useful. It sucks at x265 and x264 transcoding, it doesn't support AV1 or HEVC transcode, and it suffers from a bad case of NVIDIA drivers being garbage on linux. Thanks Jensen Huang. <br>
 Even the most basic of Intel CPUs can do these things nowadays but, who has money for upgrades in times like these?
+The first upgrade I need is more large drives to fill out some zpools. A topic for another time...
+
+I can easily install a media server in either docker or directly on the system since I am t he only one using it.
+The question is which one?
+
+I know I want the following things:
+- UPnP support - so my smart TV picks it up with no fuss
+- A web interface - so I can watch from other computers
+- Basic transcoding abilities - not all formats play on all devices
+- For it to recognize basic metadata - even if I have to add it in a separate file
+
+With the rise of people complaining about plex and the point being to freely watch my own content, I also what it to be free and open source if possible.
+
+## Jellyfin?
+
+Having seen the power of jellyfin a few years back I decided to run it on my fileserver. It worked pretty well when I tried it on windows and it did a fair job of figuring out what my media was. The problem? My file server runs linux and, while I have heard of people having good luck running Jellyfin on linux, I have not. I only have bout 7 TB in my desktop and, while that sounds like a enough to serve some media, most of my space is taken up by steam games and projects.
+This is why it is crucial to run it on my server.
 
 ## Jellyfin is great, until it isn't
 
@@ -42,27 +61,28 @@ I asked my brother if he had issues with jellyfin since I knew he was a linux mi
 - Was it the configurations? No
 - Was it the TV? No
 
-
 ## What to do
 
 Honestly my first instinct was to delve into the Jellyfin code and try to figure out what my issue was. Having already spent days sifting through reddit and github issues, I knew this would take longer than I wanted and would do nothing for my immediate problems. I wanted to add a feature to make Jellyfin go into a low hardware state and act as a file server if it can't transcode the files. Something like a safe-mode.  
-Not knowing if that was the actual issue and not having months to go over the code and do this, I decided to find a simpler fix. 
+Not knowing if that was the actual issue and not having months to go over the code and do this, I decided to find a more simpe fix. 
 
-To use something else entirely after wasting days of my life troubleshooting.
+To use something else entirely after wasting days of my life troubleshooting. Sometimes I get tunnel-vision when troubleshooting and care more about the endorphine rush of solving the problem than finding the quickest or best solution. This didn't have to be a months long project to get everything perfect and I could still watch from my other computers using SMB. I just wanted to check off the rest of my boxes and get a media server running on old hardware.
 
 I remembered using PS3mediaServer as precursor to `Universal Media Server` back in the day.
 I figured it was time to revisit this avenue and see how UMS had progressed. 
 
-## Universal Media Server
+## Enter Universal Media Server
 
 > Universal Media Server (UMS) is a DLNA compliant UPnP Media Server. Originally written to support the PlayStation 3, it has been expanded to support a range of other media renderers, including Xbox 360 and various televisions and media centers. Written in Java, it streams or transcodes many different media formats with minimum configuration from many platforms. It is supported by the MPlayer and FFmpeg packages.
 
 
-Let's see if it runs better now on Fedora Linux than it did on Windows 7 when I last used it.
+Let's see if it runs better now on Fedora Linux than it did on Windows 7 when I had last used it.
 
 I had a small issue with running on a server vs running on a desktop OS, the lack of a GUI. Luckily there is kind of a headless mode for this software and a web interface. I mean it wouldn't really be a server software without headless mode, right?
 
-I SSHd into the server and explored all of the config files in order to get started and found this to be a fun experience to set up. Doing it the hard way allowed me to get a better insight as to how this configuration works and how I could have done this much more easily. Of course, the easiest way would have been to run a desktop environment and then just configured everything from the UI. But where is the fun in that?
+The problem lies witht the headless mode not allowing me to access it from another computer. I needed to set the software up but had no DE (desktop environment) in order to pull it up in a browser on the same machine. This was a firewall issue as I state later on but it can happen to anyone.
+
+I SSHd into the server and explored all of the config files in order to get started and found this to be a fun experience to set up. Doing it the hard way allowed me to get a better insight as to how this configuration works and how I could have done this much more easily if I had just RTFM'ed. Of course, the easiest way would have been to run a desktop environment and then just configured everything from the UI. But where is the fun in that?
 
 ### Installation on a server
 
