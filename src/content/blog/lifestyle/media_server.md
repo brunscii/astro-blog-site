@@ -6,34 +6,33 @@ pubDate: "02/14/2025"
 draft: false
 ---
 
+Warning -- This is still a work in progress
+
 ## Intro
 
-Having seen the power of jellyfin a few years back, I decided to run a media server for my TV. It worked pretty well on windows and did a fair job of figuring out what my media was. The problem? My file server runs linux. I only have bout 7 TB in my desktop and, while that sounds like a enough for a decent server, most of my space is taken up by steam games.
+Having seen the power of jellyfin a few years back I decided to run it on my fileserver. It worked pretty well when I tried it on windows and it did a fair job of figuring out what my media was. The problem? My file server runs linux and while I have heard of people having good luck running Jellyfin on linux, I have not. I only have bout 7 TB in my desktop and, while that sounds like a enough to serve some media, most of my space is taken up by steam games and repos.
+This is why it is crucial to run it on my server.
 
-I have a file server for a reason. I wanted a backup of my movies, tv shows, drives, games, and whatever else. Currently it isn't set up how I would like due to budget cuts. 
-Eventually I want to set up a RAIDZ1 configuration with several 20 TB drives. Until then however, we will have to settle for the many 1 and 2 TB drives hoddled together JBOD style in this raggety old computer. 
+Like many nerds, I have a file server for my backups and to store copies of my movies and tv shows. I even keep copies of my ebooks and games so I hopefully don't lose anything. Shoot, I even have copies of my old college work from my CS classes.
 
-This server is made from an on gaming computer that was mid at the time. It's AMD from before AMD was good.  AMD from when their stock sank to $2 a share. 
-That's right, in case you don't remember, the fx-8150 was one of the chips that led AMD into the grave. 
-AMD released the first "eight core" desktop processor and I had to have it. I was happy with the dual core Athlon CPU I had years before so I chose the FX-8150.
-Ahh the 8150, a hot, slow, turd of a processor. It claimed to have 8 cores but the cores shared resources for every 2 cores making it seem more like a 4 core with hyper threading.
-In fact, AMD had to pay $12 million is a settlement over the fact that the claimed it was an 8 core CPU.
-
-Thankfully AMD has recovered and makes some very nice desktop and server class chips now. 
-
-The GPU in the server is a 980ti Hybrid. A water cooled beast of a graphics card for the time. Unfortunately it's 5 generations too old to be useful. It sucks at x265 and x264 transcoding. It doesn't support AV1 or HEVC transcode and suffers from a bad case of NVIDIA sucking at linux support.
-Even the most basic of Intel CPUs can do these things. CPUs are way worse at these tasks but Quick Sync is a beast.
-In fact, Quick Sync came out right around the time of this AMD flop that is in here.
+The server is an old 8 core processor that can keep up with a few VMs and a server version of Fedora.
+The GPU in the server is a 980ti Hybrid. A water cooled beast of a graphics card for the time. Unfortunately it's 5 generations too old to be useful. It sucks at x265 and x264 transcoding, it doesn't support AV1 or HEVC transcode, and suffers from a bad case of NVIDIA drivers being garbage on linux. Thanks Jensen Huang. <br>
+Even the most basic of Intel CPUs can do these things nowadays but, who has money for upgrades in times like these?
 
 ## Jellyfin is great, until it isn't
 
-Anyways, long story long, we can't rule hardware out from the equation in the fact that Jellyfin refuses to cooperate in serving my media. It will obviously recognize the media as it sometimes shows episodes of TV shows in the "suggested" or "newly added" sections but it doesn't show in the actual "shows" section. Sometimes I can get Jellyfin to find and recognize shows just to not play anything claiming there was no playable media found. 
+Anyways, long story long, I have problems running Jellyfin on my file server. Jellyfin recognizes the folder and will show the files when I'm in the folder mode, but it refuses to find metadata and recognize the media enough to sort it into the appropriate library. I ruled out permissions issues and configuration issues through days of troubleshooting. I even went as far as to use TinyMediaManager to rename and manually find metadata for serveral of the files. You would think with the shows and movies being recognized my TinyMediaManager, the files/folders being renamed, and the metadata being saved, that Jellyfin would quickly recognize the media right?
 
-Maybe I can't transcode theses files with hardware but I should still be able to serve the file raw right? 
-That being, said I know my TV can directly play some of these files from flash drives.
-Why can't Jellyfin just serve up these files, or even find these shows?
+Apparantly not.
 
-After days of changing permissions, renaming files, making nfo files for the metadata using tinyMediaManager, and even completely removing the program and reinstalling I still have similar but different issues. The documentation always shows how to do things on debian. Is the problem that I am using Fedora?
+It will sometimes recognize the media as it will show episodes of TV shows in the "suggested" or "newly added" sections but it doesn't show in the actual "shows" section. Sometimes I can get Jellyfin to find and recognize shows just to not play anything claiming there was no playable media found. Thinking this could be transcode issues I made sure the files would play fine through a vlc stream. 
+
+That being, said I also know my TV can directly play some of these files from flash drives.
+Why can't Jellyfin just serve up these files directly without transcode issues or recognition issues?
+
+After days of changing permissions, renaming files, making nfo files for the metadata using tinyMediaManager, and even completely removing the program and reinstalling I still had the same issues. The documentation always shows how to do things on debian. Is the problem that I am using Fedora?
+
+I asked my brother if he had issues with jellyfin since I knew he was a linux mint user. He said he also had similar issues with the program.
 
 - Would these problems persist with the docker version? Yes
 - Is the problem that I am using Fedora Server? Maybe
@@ -46,32 +45,31 @@ After days of changing permissions, renaming files, making nfo files for the met
 
 ## What to do
 
-So to be honest when Jellyfin wasn't just giving the file directly to my TV I wanted to fix the code. To make it go into a low hardware state and act as a file server if it can't transcode the file. 
+Honestly my first instinct was to delve into the Jellyfin code and try to figure out what my issue was. Having already spent days sifting through reddit and github issues, I knew this would take longer than I wanted and would do nothing for my immediate problems. I wanted to add a feature to make Jellyfin go into a low hardware state and act as a file server if it can't transcode the files. Something like a safe-mode.  
 Not knowing if that was the actual issue and not having months to go over the code and do this, I decided to find a simpler fix. 
+
 To use something else entirely after wasting days of my life troubleshooting.
 
-I then reconfigured SAMBA to make sure I could access and organize my files better over the network. 
-
-I remembered using PS3mediaServer back in the day as precursor to Universal Media Server back in the day. Universal Media Server would probably still be around in the time of the PS5 right? Right.
-
-So with more problems than it's worth in jellyfin, let's get up and running with `Universal Media Server`.
+I remembered using PS3mediaServer as precursor to `Universal Media Server` back in the day.
+I figured it was time to revisit this avenue and see how UMS had progressed. 
 
 ## Universal Media Server
 
 > Universal Media Server (UMS) is a DLNA compliant UPnP Media Server. Originally written to support the PlayStation 3, it has been expanded to support a range of other media renderers, including Xbox 360 and various televisions and media centers. Written in Java, it streams or transcodes many different media formats with minimum configuration from many platforms. It is supported by the MPlayer and FFmpeg packages.
 
 
-Let's see if it runs better now on Fedora Linux than it did on Windows 7, from when this computer was new.
+Let's see if it runs better now on Fedora Linux than it did on Windows 7 when I last used it.
 
-I had a small issue with running on a server vs running on a desktop OS, the lack of GUI. Luckily there is kind of a headless mode for this software and a web interface.
+I had a small issue with running on a server vs running on a desktop OS, the lack of a GUI. Luckily there is kind of a headless mode for this software and a web interface. I mean it wouldn't really be a server software without headless mode, right?
 
-I SSHd into the server and explored all of the config files in order to get started and found this to be a fun experience to set up. Doing it the hard way allowed me to get a better understanding of how this configuration works and how I could have done this easier.
+I SSHd into the server and explored all of the config files in order to get started and found this to be a fun experience to set up. Doing it the hard way allowed me to get a better insight as to how this configuration works and how I could have done this much more easily. Of course, the easiest way would have been to run a desktop environment and then just configured everything from the UI. But where is the fun in that?
 
 ### Installation on a server
 
-I started with downloading the tarball file from UMS with wget. `wget https://github.com/UniversalMediaServer/UniversalMediaServer/releases/download/14.9.0/UMS-Linux-14.9.0-x86_64.tgz` 
+I started with downloading the tarball file from UMS with wget. 
+`wget https://github.com/UniversalMediaServer/UniversalMediaServer/releases/download/14.9.0/UMS-Linux-14.9.0-x86_64.tgz` 
 
-After the download we extract and look over the files. What's that tarball extraction command again? `tar -xvzf UMS-Linux-14.9.0-x86_64.tgz` works pretty well.
+After the download I extracted and looked over the files. What's that tarball extraction command again? `tar -xvzf UMS-Linux-14.9.0-x86_64.tgz` works pretty well.
 We get something like this:
 ``` bash extraction
 user@server:~$ tar -xvzf UMS-Linux-14.9.0-x86_64.tgz
@@ -695,9 +693,9 @@ ums-14.9.0/web/react-client/static/index-34e34650.js.map
 ums-14.9.0/web/react-client/static/index-9dc024e1.css
 ```
 
-As you can see there are quite a few files here and there are a few config files. Let's manually install this program on our version on linux by moving this folder into the /opt folder. It is an optional program afterall. 
+As you can see there are quite a few files here and there are a few config files. I then manually installed this program on the server by moving this directory into `/opt`. It is an optional program afterall. 
 
-We find a INSTALL.txt file that contains the following: 
+I found a INSTALL.txt file that contained the following: 
 ``` INSTALL.txt
 Installers for Windows and macOS and tarballs for Linux can be found at:
 
@@ -741,7 +739,7 @@ UMS accesses some files in the `ums-$VERSION/` directory (the working directory)
 Other files will be looked for in `~/.config/UMS`
 ```
 
-The key takeaway is that you need to install the dependencies `mediainfo dcraw vlc-bin mplayer mencoder`. We will use dnf instead of apt-get or apt.
+The key takeaway is that you need to install the dependencies `mediainfo dcraw vlc-bin mplayer mencoder`. Using dnf instead of apt-get or apt I was able to find and install the dependencies.
 
 Let's look into the config files.
 
@@ -782,10 +780,10 @@ In UMS.conf we can see a well written intro to the configuration files.
 ```
 
 Now this intro says we can use the GUI and the web GUI in order to set these configuration setting.
-I ignored this and went with the third option of editing the config file manually, in the command line, using nano, over SSH. 
+I ignored this and went with the third option of editing the config file manually using nano over SSH, this is not recommended for beginners. 
 
 You not only don't have to do it this way but I would strongly advise against it unless you are a power user or are very familiar with the linux terminal.
-As a matter of fact, I will be walking through how to get to the web interface as it is much more simple to setup.
+As a matter of fact, I will be walking through how to get to the web interface as it is way more simple to setup.
 
 Basically we can go to <server_name>:webUI_port and see the gui of the server right?
 Not quite. 
