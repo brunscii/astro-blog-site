@@ -16,6 +16,12 @@ So, what are the advantages?
 
 For any type of sorting you have to do, there is almost always a better sorting algorithm out there. This one, however, is a good one to learn just to learn the basics of algorithms.
 
+<p align="center>
+
+![bubble sort](/public/blogContent/bubbleSort/Sorting_bubblesort_anim.gif) 
+
+</p>
+
 ----TODO
 - add graphics
 - add code
