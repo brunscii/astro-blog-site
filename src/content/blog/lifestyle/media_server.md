@@ -75,16 +75,22 @@ I figured it was time to revisit this avenue and see how UMS had progressed.
 
 > Universal Media Server (UMS) is a DLNA compliant UPnP Media Server. Originally written to support the PlayStation 3, it has been expanded to support a range of other media renderers, including Xbox 360 and various televisions and media centers. Written in Java, it streams or transcodes many different media formats with minimum configuration from many platforms. It is supported by the MPlayer and FFmpeg packages.
 
+> It is powered by FFmpeg, MediaInfo, OpenSubtitles, Crowdin, MEncoder, tsMuxeR, AviSynth, VLC and more, which combine to offer support for a wide range of media formats.
 
 Let's see if it runs better now on Fedora Linux than it did on Windows 7 when I had last used it.
 
-I had a small issue with running on a server vs running on a desktop OS, the lack of a GUI. Luckily there is kind of a headless mode for this software and a web interface. I mean it wouldn't really be a server software without headless mode, right?
+I had a small issue with running on a server remotely vs running on a desktop OS, the lack of a GUI. Luckily there is kind of a headless mode for this software and a web interface. I mean it wouldn't really be a server software without headless mode, right?
 
-The problem lies witht the headless mode not allowing me to access it from another computer. I needed to set the software up but had no DE (desktop environment) in order to pull it up in a browser on the same machine. This was a firewall issue as I state later on but it can happen to anyone.
-
-I SSHd into the server and explored all of the config files in order to get started and found this to be a fun experience to set up. Doing it the hard way allowed me to get a better insight as to how this configuration works and how I could have done this much more easily if I had just RTFM'ed. Of course, the easiest way would have been to run a desktop environment and then just configured everything from the UI. But where is the fun in that?
+The problem lies witht the headless mode not allowing me to access it from another computer. I needed to set the software up but had no DE (desktop environment) in order to pull it up in a browser on the same machine. This was a firewall issue as I state later on but it can happen to anyone. While I could SSH into the server, I couldn't pull up the web interface of UMS like I could pull up cockpit and some other dashboards. It's an easy fix that's near the end of the blog.
 
 ### Installation on a server
+
+I'm not saying that you will have problems installing this software. In fact, it is pretty straight forward on most platforms, ie. Windows, Mac, most Linux dristros (assuming you know how to use AppImage or how to install from a tarball). There is even a Docker image for you to use regardless of OS. The only Installation documentation they give is for Docker as they seem to think that the other install methods are self explainatory.
+[Here](https://support.universalmediaserver.com/category/installation) is their installation documentation.
+
+Here is how I approached my install, completely via SSH.
+
+I SSH'd into the server, you could do the same if you are physically on the server. 
 
 I started with downloading the tarball file from UMS with wget. 
 `wget https://github.com/UniversalMediaServer/UniversalMediaServer/releases/download/14.9.0/UMS-Linux-14.9.0-x86_64.tgz` 
@@ -713,7 +719,8 @@ ums-14.9.0/web/react-client/static/index-34e34650.js.map
 ums-14.9.0/web/react-client/static/index-9dc024e1.css
 ```
 
-As you can see there are quite a few files here and there are a few config files. I then manually installed this program on the server by moving this directory into `/opt`. It is an optional program afterall. 
+As you can see there are quite a few files here and there are a few config files. I then manually installed this program on the server by manually moving this directory into `/opt`. It is an optional program afterall. 
+I suppose this could have been combined into the extraction step and I could have simply extracted into that folder. I could have also just gone with setting it up and running it from the download directory if I wanted to be a slob.
 
 I found a INSTALL.txt file that contained the following: 
 ``` INSTALL.txt
@@ -759,7 +766,8 @@ UMS accesses some files in the `ums-$VERSION/` directory (the working directory)
 Other files will be looked for in `~/.config/UMS`
 ```
 
-The key takeaway is that you need to install the dependencies `mediainfo dcraw vlc-bin mplayer mencoder`. Using dnf instead of apt-get or apt I was able to find and install the dependencies.
+The key takeaway is that you need to install the dependencies `mediainfo dcraw vlc-bin mplayer mencoder`. Using dnf instead of apt-get or apt, obviously, I was able to find and install the dependencies.
+You should also have the appropriate JRE, Java Runtime Environment not Joe Rogan Experience.
 
 Let's look into the config files.
 
@@ -845,3 +853,13 @@ run_wizard = true
 ```
 
 If you have a desktop version of fedora or perhaps a server with a Desktop Environment installed, then you can do the configuration locally through the web ui or the actual GUI of the program. This will save some time.
+
+Now it is as simple as running the initial setup wizard and following the basic steps of creating a user, adding the media you want to be able to stream, and setting up your devices. The documentation actually gives a quick rundown of how to setup the [Security and Privacy](https://support.universalmediaserver.com/configuration/security-and-privacy), an [External API](https://support.universalmediaserver.com/configuration/external-api), and other [Guides](https://support.universalmediaserver.com/category/guides).
+
+## Conclusion
+
+I really like UMS and think it is one of the better media server solutions. It does a better job at recognizing media than Jellyfin, at least for me, and it allows for direct access to files and the ability to download them from your personal server. If you set this up on a server with a tailscale connection then you can access your media from anywhere. It is like having your own private Netflix or Hulu without the worry of your favorite movie getting removed without notice. You can have access you all of your old media that isn't streaming anywhere that you have physical copies of.
+
+If you are a Docker user just want to stream stuff from your desktop then this is a great solution. 
+
+As long as we still have physical media, we will still have some form of ownership and domain over our viewing experience. 
