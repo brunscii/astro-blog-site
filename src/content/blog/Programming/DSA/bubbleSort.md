@@ -19,7 +19,11 @@ For any type of sorting you have to do, there is almost always a better sorting 
 
 ## Time complexity
 
+Bubble sort has an average and worst case time complexity of O(n<sup>2</sup>). If for whatever reason the list is already sorted, then the time complexity is O(n) with 0 swaps. 
+
 ## Space complexity
+
+The space complexity of bubble sort is O(1). It is constant as you only need enough extra space to store the temporary value from the list long enough to perform the swap. 
 
 ## Diagrams
 
@@ -33,6 +37,7 @@ For any type of sorting you have to do, there is almost always a better sorting 
 
 ``` JavaScript
 
+//JavaScript
 function bubbleSort(arr){
   for(let i = 0; i < arr.length; i++){
     for(let j = 0; j <= arr.length-1; j++){
@@ -45,4 +50,18 @@ function bubbleSort(arr){
   }
   return arr
 }
+
+```
+
+```JavaScript
+
+//slightly uglier JavaScript
+function bubbleSort(arr){
+  for(let i = 0; i < arr.length; i++)
+    for(let j = 0; j <= arr.length-1; j++)
+      if(arr[j] > arr[j+1])
+        [arr[j], arr[j+1]] = [arr[j+1],arr[j]]
+  return arr
+}
+
 ```
