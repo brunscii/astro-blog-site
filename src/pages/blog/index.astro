@@ -24,6 +24,7 @@ let searchTerm = ''
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 
 		<style>
+      
       .hidden {
         visibility: hidden;
         display: none;
@@ -35,11 +36,45 @@ let searchTerm = ''
 				list-style-type: none;
 				padding: unset;
 			}
+      p.blog-post-description{
+        font-size: .8em;
+      }
 
-			ul li {
-				display: grid;
-				grid-template-columns: 12ch 40ch 20ch;
-			}
+      @media only screen and (max-width:79ch) {
+
+        main{
+          padding: .5em;
+        }
+
+        .blog-post{
+          border: 1px solid grey;
+          margin-block: .5em;
+        }
+
+        ul#blog-list{
+        max-width: fit-content;
+        }
+
+        ul li {
+          display: grid;
+          grid-template-rows: 6ch 6ch 3ch;
+			  }
+        p.blog-post-description{
+          margin-left:1em;
+        }
+      }
+
+      @media only screen and (min-width: 80ch) {
+       
+        ul li {
+          display: grid;
+          grid-template-columns: 12ch 40ch 20ch;
+        } 
+        .blog-post-description {
+          grid-column-end: span 3;
+          margin-left: 3em;
+        }
+      }
 
 			ul li :global(time), ul li span, ul p {
 				font-style: italic;
@@ -52,12 +87,6 @@ let searchTerm = ''
 
 			ul li a:visited {
 				/* color: #8e32dc; */
-			}
-
-			ul p {
-				/* text-indent: 3em; */
-				margin-left: 3em;
-				font-size: .8em;
 			}
 
       .category {
@@ -73,7 +102,7 @@ let searchTerm = ''
         resize: none;
         padding: .1em;
         text-align: center;
-        width: 80ch;
+        width: 100%;
 
       }
       
@@ -90,10 +119,6 @@ let searchTerm = ''
 
       #blog-category-search:focus::placeholder {
         color: transparent;
-      }
-
-      .blog-post-description {
-        grid-column-end: span 3;
       }
 
 		</style>
