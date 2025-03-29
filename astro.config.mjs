@@ -10,7 +10,7 @@ import netlify from "@astrojs/netlify";
 export default defineConfig({
   site: 'https://blog.christopherjcarlin.com',
   base: '/astro-blog-site/',
-  publicDir: '/astro-blog-site/',
+  publicDir: '/',
   integrations: [mdx(), sitemap()],
   markdown: {
     syntaxHighlight: 'shiki'
