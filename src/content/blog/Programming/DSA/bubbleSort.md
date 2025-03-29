@@ -29,7 +29,7 @@ The space complexity of bubble sort is O(1). It is constant as you only need eno
 
 <p align="center>
 
-![bubble sort](/public/blogContent/bubbleSort/Sorting_bubblesort_anim.gif) 
+![bubble sort](/astro-blog-site/bubbleSort/Sorting_bubblesort_anim.gif) 
 
 </p>
 
