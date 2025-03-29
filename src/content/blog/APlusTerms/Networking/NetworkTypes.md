@@ -3,7 +3,7 @@ title: "Network Types"
 description: "A brief overview of the network types that appear on the A+ certification exam"
 author: "Chris Carlin"
 draft: true
-heroImage: "/public/blogContent/network.jpg"
+heroImage: "/network.jpg"
 ---
 
 ## Network Types
