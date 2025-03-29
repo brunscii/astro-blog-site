@@ -9,7 +9,7 @@ const $$Flashcard = createComponent(($$result, $$props, $$slots) => {
 }, "C:/Users/meatw/source/repos/brunscii/astro-blog-site/src/pages/flashcard.astro", void 0);
 
 const $$file = "C:/Users/meatw/source/repos/brunscii/astro-blog-site/src/pages/flashcard.astro";
-const $$url = "/astro-blog-site/flashcard";
+const $$url = "/flashcard";
 
 const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
   __proto__: null,

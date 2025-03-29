@@ -1,7 +1,7 @@
 import { a as createComponent, r as renderComponent, b as renderHead, e as addAttribute, f as renderScript, d as renderTemplate } from '../chunks/astro/server_D7v_6QAN.mjs';
 import 'kleur/colors';
-import { $ as $$BaseHead, a as $$Header, B as BASE, b as $$Footer, S as SITE_DESCRIPTION, c as SITE_TITLE } from '../chunks/Footer_DLGMPU_9.mjs';
-import { g as getCollection, $ as $$FormattedDate } from '../chunks/FormattedDate_BYve5LUT.mjs';
+import { $ as $$BaseHead, a as $$Header, B as BASE, b as $$Footer, S as SITE_DESCRIPTION, c as SITE_TITLE } from '../chunks/Footer_BkNB040i.mjs';
+import { g as getCollection, $ as $$FormattedDate } from '../chunks/FormattedDate_Dq86ElPZ.mjs';
 /* empty css                                 */
 export { renderers } from '../renderers.mjs';
 
@@ -19,7 +19,7 @@ const $$Index = createComponent(async ($$result, $$props, $$slots) => {
 }, "C:/Users/meatw/source/repos/brunscii/astro-blog-site/src/pages/blog/index.astro", void 0);
 
 const $$file = "C:/Users/meatw/source/repos/brunscii/astro-blog-site/src/pages/blog/index.astro";
-const $$url = "/astro-blog-site/blog";
+const $$url = "/blog";
 
 const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
   __proto__: null,

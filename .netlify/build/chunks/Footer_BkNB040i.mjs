@@ -24,7 +24,7 @@ const $$HeaderLink = createComponent(($$result, $$props, $$slots) => {
 
 const SITE_TITLE = "Carlin Tech Blog";
 const SITE_DESCRIPTION = "Christopher Carlin's Blog Stite";
-const BASE = "/astro-blog-site/";
+const BASE = "/";
 
 const $$Header = createComponent(($$result, $$props, $$slots) => {
   return renderTemplate`${maybeRenderHead()}<header data-astro-cid-3ef6ksr2> <h1 data-astro-cid-3ef6ksr2> ${SITE_TITLE} </h1> <nav data-astro-cid-3ef6ksr2> ${renderComponent($$result, "HeaderLink", $$HeaderLink, { "href": BASE + "", "data-astro-cid-3ef6ksr2": true }, { "default": ($$result2) => renderTemplate`Home` })} ${renderComponent($$result, "HeaderLink", $$HeaderLink, { "href": BASE + "blog", "data-astro-cid-3ef6ksr2": true }, { "default": ($$result2) => renderTemplate`Blogs` })} ${renderComponent($$result, "HeaderLink", $$HeaderLink, { "href": BASE + "about", "data-astro-cid-3ef6ksr2": true }, { "default": ($$result2) => renderTemplate`About` })} ${renderComponent($$result, "HeaderLink", $$HeaderLink, { "href": "https://christopherjcarlin.com", "target": "_blank", "data-astro-cid-3ef6ksr2": true }, { "default": ($$result2) => renderTemplate`Portfolio` })} ${renderComponent($$result, "HeaderLink", $$HeaderLink, { "href": "https://github.com/brunscii", "target": "_blank", "data-astro-cid-3ef6ksr2": true }, { "default": ($$result2) => renderTemplate`GitHub` })} </nav> </header> `;

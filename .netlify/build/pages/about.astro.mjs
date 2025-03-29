@@ -1,6 +1,6 @@
 import { c as createAstro, a as createComponent, r as renderComponent, b as renderHead, d as renderTemplate } from '../chunks/astro/server_D7v_6QAN.mjs';
 import 'kleur/colors';
-import { $ as $$BaseHead, a as $$Header, b as $$Footer } from '../chunks/Footer_DLGMPU_9.mjs';
+import { $ as $$BaseHead, a as $$Header, b as $$Footer } from '../chunks/Footer_BkNB040i.mjs';
 /* empty css                                 */
 export { renderers } from '../renderers.mjs';
 
@@ -30,7 +30,7 @@ Ideally all blog posts will have tags as to what the blog regards, whether A+ st
 }, "C:/Users/meatw/source/repos/brunscii/astro-blog-site/src/pages/about.astro", void 0);
 
 const $$file = "C:/Users/meatw/source/repos/brunscii/astro-blog-site/src/pages/about.astro";
-const $$url = "/astro-blog-site/about";
+const $$url = "/about";
 
 const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
     __proto__: null,

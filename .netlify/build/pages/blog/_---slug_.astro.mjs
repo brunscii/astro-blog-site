@@ -1,7 +1,7 @@
 import { c as createAstro, a as createComponent, r as renderComponent, b as renderHead, g as renderSlot, d as renderTemplate, e as addAttribute } from '../../chunks/astro/server_D7v_6QAN.mjs';
 import 'kleur/colors';
-import { $ as $$FormattedDate, g as getCollection } from '../../chunks/FormattedDate_BYve5LUT.mjs';
-import { $ as $$BaseHead, a as $$Header, b as $$Footer } from '../../chunks/Footer_DLGMPU_9.mjs';
+import { $ as $$FormattedDate, g as getCollection } from '../../chunks/FormattedDate_Dq86ElPZ.mjs';
+import { $ as $$BaseHead, a as $$Header, b as $$Footer } from '../../chunks/Footer_BkNB040i.mjs';
 /* empty css                                     */
 export { renderers } from '../../renderers.mjs';
 
@@ -34,7 +34,7 @@ const $$ = createComponent(async ($$result, $$props, $$slots) => {
 }, "C:/Users/meatw/source/repos/brunscii/astro-blog-site/src/pages/blog/[...slug].astro", void 0);
 
 const $$file = "C:/Users/meatw/source/repos/brunscii/astro-blog-site/src/pages/blog/[...slug].astro";
-const $$url = "/astro-blog-site/blog/[...slug]";
+const $$url = "/blog/[...slug]";
 
 const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
 	__proto__: null,

@@ -1,6 +1,6 @@
 import { a as createComponent, r as renderComponent, b as renderHead, d as renderTemplate } from '../chunks/astro/server_D7v_6QAN.mjs';
 import 'kleur/colors';
-import { $ as $$BaseHead, a as $$Header, b as $$Footer, S as SITE_DESCRIPTION, c as SITE_TITLE } from '../chunks/Footer_DLGMPU_9.mjs';
+import { $ as $$BaseHead, a as $$Header, b as $$Footer, S as SITE_DESCRIPTION, c as SITE_TITLE } from '../chunks/Footer_BkNB040i.mjs';
 /* empty css                                 */
 export { renderers } from '../renderers.mjs';
 
@@ -25,7 +25,7 @@ I will try to push myself, as best I can, to maintain and add to this blog as I 
 }, "C:/Users/meatw/source/repos/brunscii/astro-blog-site/src/pages/index.astro", void 0);
 
 const $$file = "C:/Users/meatw/source/repos/brunscii/astro-blog-site/src/pages/index.astro";
-const $$url = "/astro-blog-site";
+const $$url = "";
 
 const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
     __proto__: null,

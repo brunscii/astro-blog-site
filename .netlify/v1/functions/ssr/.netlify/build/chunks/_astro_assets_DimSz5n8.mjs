@@ -302,7 +302,7 @@ const baseService = {
     Object.entries(params).forEach(([param, key]) => {
       options[key] && searchParams.append(param, options[key].toString());
     });
-    const imageEndpoint = joinPaths("/astro-blog-site/", imageConfig.endpoint.route);
+    const imageEndpoint = joinPaths("/", imageConfig.endpoint.route);
     return `${imageEndpoint}?${searchParams}`;
   },
   parseURL(url) {
@@ -1191,7 +1191,7 @@ async function getConfiguredImageService() {
   if (!globalThis?.astroAsset?.imageService) {
     const { default: service } = await import(
       // @ts-expect-error
-      './sharp_Dafnl1vh.mjs'
+      './sharp_DOhErkoR.mjs'
     ).catch((e) => {
       const error = new AstroError(InvalidImageService);
       error.cause = e;
