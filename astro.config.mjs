@@ -8,9 +8,9 @@ import netlify from "@astrojs/netlify";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'blog.christopherjcarlin.com',
+  site: 'https://blog.christopherjcarlin.com',
   base: '/astro-blog-site/',
-  publicDir: '/',
+  publicDir: '/astro-blog-site/',
   integrations: [mdx(), sitemap()],
   markdown: {
     syntaxHighlight: 'shiki'
