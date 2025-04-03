@@ -62,6 +62,6 @@ Care more about your data, then RAID 6 might be useful as it offers many of the 
 
 ZFS is a file system that was made by Sun Microsystems for use on Solaris. It stands for *Z*ettabyte *F*ile *S*ystem and was designed to deal with larger files and capacities. 
 
-ZFS has since been adopted by freeNAS and has many RAID configurations. 
+ZFS has since been adopted by freeNAS and has many RAID-style configurations. 
 
 RAID 0 is considered a striped VDev. RAID 1 is acheived by mirroring the VDevs. RAID 5 is considered RAIDZ1, RAID 6 is RAIDZ2 and RAIDZ3 is just a continuation of the pattern with 3 parity block instead of 2. 

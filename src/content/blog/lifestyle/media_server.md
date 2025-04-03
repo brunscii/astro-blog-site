@@ -856,6 +856,33 @@ If you have a desktop version of fedora or perhaps a server with a Desktop Envir
 
 Now it is as simple as running the initial setup wizard and following the basic steps of creating a user, adding the media you want to be able to stream, and setting up your devices. The documentation actually gives a quick rundown of how to setup the [Security and Privacy](https://support.universalmediaserver.com/configuration/security-and-privacy), an [External API](https://support.universalmediaserver.com/configuration/external-api), and other [Guides](https://support.universalmediaserver.com/category/guides).
 
+## Setting up a service
+
+Having UMS working on your server is pretty nice. What's even better is not having to worry about starting it up when you want to watch a movie or show. Setting up a service for systemd will help with this.
+
+Below is the service file I added to my /etc/systemd/system directory. I named the file ums.service.
+You will have to change `username` to whatever the username is that you want to run the service under.
+
+If you did not put the UMS.sh file in the /opt/ums folder then you will need to edit the `ExecStart` line to reflect the current location UMS.sh.
+
+``` bash
+[Unit]
+Description=Run UMS as username
+DefaultDependencies=yes
+After=network.target
+
+[Service]
+Type=simple
+User=username
+ExecStart=/bin/bash /opt/ums/UMS.sh
+TimeoutStartSec=0
+RemainAfterExit=yes
+Environment="UMS_MAX_MEMORY=2G"
+
+[Install]
+WantedBy=default.target
+```
+
 ## Conclusion
 
 I really like UMS and think it is one of the better media server solutions. It does a better job at recognizing media than Jellyfin, at least for me, and it allows for direct access to files and the ability to download them from your personal server. If you set this up on a server with a tailscale connection then you can access your media from anywhere. It is like having your own private Netflix or Hulu without the worry of your favorite movie getting removed without notice. You can have access you all of your old media that isn't streaming anywhere that you have physical copies of.
