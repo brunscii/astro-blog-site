@@ -3,7 +3,7 @@ author: 'Chris Carlin'
 title: 'Intalling Experimentatl ZFS'
 desciption: 'Installing openZFS on fedora server 42 before it is supported'
 pubDate: '04/20/2025'
-draft: true
+draft: false
 ---
 
 ## What are we doing?
@@ -15,7 +15,9 @@ Here we will look at building the source from the provided tarball file.
 
 ## First things first
 
-This is not meant to be a guide but more of a documentation of my journey into building openZFS for fedora 42 using a fresh VM. This isn't a production environment and isn't even running on my current server. This is me experimenting and seeing if this is feasable so I can decide if I want to upgrade to fedora 42. If it is too much of a pain then I will probably wait for more support for fedora 42 before upgrading.
+This is not meant to be a guide but more of a documentation of my journey into building openZFS for fedora 42 using a fresh VM. This isn't a production environment and isn't even running on my current server. This is me experimenting and seeing if this is feasable so I can decide if I want to upgrade to fedora 42. If it is too much of a pain then I will probably wait for more support for fedora 42 before upgrading. 
+
+This is just me playing with building on an unsupported kernel. Kernel `6.14.2-300.fc42.x86_64`
 
 ## The journey
 
@@ -13652,4 +13654,16 @@ For the delegated permission list, run: zfs allow|unallow
 For further help on a command or topic, run: zfs help [<topic>]
 ```
 
-Well, that seemed to work. But what about the rpm file?
+## Conclustion
+
+If I do decide to upgrade to fedora 42 then I will at lease choose to stay on the older kernel or switch to a more LTS kernel from COPR. Using `--exclude=kernel\*` when upgrading could also work.
+
+Zfs seems to work here. 
+I did wind up playing with rpmrebuild to get zfs-dkms and some of the other rpm files to work on kernel 6.14.2-300.
+This wasn't necessary as zfs was already working but was more for academic purposes.
+
+The real question is will this work on bare metal?
+
+I think I'll wait for the official release before switching my homelab over as there I witnessed some quirks that I'd rather not have to face. My current server runs my media and file server so I would like stability there, eventhough it runs fedora. 
+
+If I get time I might throw this on an old computer with a few old drives and see if I can run a stable raidz1 vdev and get a working zpool. As for now, this has been a quick exploration into building zfs for fedora 42.
