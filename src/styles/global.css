@@ -59,6 +59,10 @@ main {
     box-sizing: border-box;
 }
 
+article{
+  max-width: 86ch;
+}
+
 a {
 	color: var(--link-color);
 	/* color: #3273dc; */
@@ -89,6 +93,7 @@ img {
 code {
 	padding: 2px 5px;
 	background-color: var(--bg-color-code);
+  /* box-sizing: border-box; */
 }
 
 pre {
@@ -97,12 +102,12 @@ pre {
 
 	padding: 1rem;
 	max-height: 22em;
-	box-sizing: border-box;
+  /* box-sizing: border-box; */
 }
 
-pre > code {
+/* pre > code {
 	all: unset;
-}
+} */
 
 blockquote {
 	border: 1px solid #999;
