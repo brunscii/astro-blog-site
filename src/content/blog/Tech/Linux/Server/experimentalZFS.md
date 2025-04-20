@@ -1,7 +1,7 @@
 ---
 author: 'Chris Carlin'
 title: 'Intalling Experimentatl ZFS'
-desciption: 'Installing openZFS on fedora server 42 before it is supported'
+description: 'Installing openZFS on fedora server 42 before it is supported'
 pubDate: '04/20/2025'
 draft: false
 ---
